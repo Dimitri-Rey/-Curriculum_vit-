@@ -4,6 +4,15 @@ body {
     font-family: 'Arial', sans-serif;
 }
 
+/* Effet de vague */
+.wave {
+    background: linear-gradient(to right, #ff6600, #ff8533);
+    height: 120px;
+    clip-path: polygon(0 100%, 100% 0, 100% 100%, 0 100%);
+    margin-top: -10px;
+}
+
+/* Header style */
 header {
     background-color: #ff6600;
     color: white;
@@ -22,7 +31,7 @@ footer {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Boutons personnalisés */
+/* Custom buttons */
 .btn-custom {
     background-color: #ff6600;
     border: none;
@@ -30,15 +39,23 @@ footer {
     padding: 10px 20px;
     border-radius: 25px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
 }
 
 .btn-custom:hover {
     background-color: #e65c00;
+    transform: scale(1.1);
 }
 
-/* Images de profil */
+/* Images */
 .profile-img {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+/* Zoom effect */
+.zoom-img:hover {
+    transform: scale(1.1);
 }
 
 /* Sections */
@@ -50,7 +67,7 @@ section {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Cards for projects */
+/* Cards */
 .card {
     transition: transform 0.3s;
     border-radius: 15px;
@@ -78,4 +95,33 @@ section {
     height: 5px;
     background-color: #ff6600;
     z-index: 1000;
+}
+
+/* Animation d'apparition */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animation de texte */
+.animate-text {
+    animation: text-appear 0.8s ease forwards;
+    opacity: 0;
+}
+
+@keyframes text-appear {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

@@ -15,3 +15,15 @@ window.onscroll = function() {
     var scrolled = (scrollPos / winHeight) * 100;
     document.getElementById("progress-bar").style.width = scrolled + "%";
 };
+
+// Animation d'apparition au scroll
+window.addEventListener('scroll', function() {
+    const elements = document.querySelectorAll('.fade-in');
+    elements.forEach(element => {
+        const position = element.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        if (position - windowHeight <= -50) {
+            element.classList.add('visible');
+        }
+    });
+});
