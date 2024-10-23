@@ -1,0 +1,42 @@
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+}
+
+header {
+    background: #007bff;
+    color: white;
+}
+
+header h1 {
+    font-size: 3rem;
+}
+
+#about img {
+    border: 5px solid #007bff;
+}
+
+section {
+    padding: 50px 0;
+}
+
+section h2 {
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+footer {
+    background: #333;
+    color: white;
+}
+
+.footer {
+    padding: 20px;
+}
