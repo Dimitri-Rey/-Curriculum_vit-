@@ -1,42 +1,81 @@
+/* Background and theme colors */
 body {
+    background-color: #f9f9f9;
     font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
-
-h1, h2, h3 {
-    font-weight: 700;
 }
 
 header {
-    background: #007bff;
+    background-color: #ff6600;
     color: white;
-}
-
-header h1 {
-    font-size: 3rem;
-}
-
-#about img {
-    border: 5px solid #007bff;
-}
-
-section {
-    padding: 50px 0;
-}
-
-section h2 {
-    margin-bottom: 30px;
-    font-size: 2rem;
+    border-radius: 15px;
+    margin: 20px;
+    padding: 40px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 footer {
-    background: #333;
+    background-color: #222;
     color: white;
+    border-radius: 15px;
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.footer {
-    padding: 20px;
+/* Boutons personnalisés */
+.btn-custom {
+    background-color: #ff6600;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-custom:hover {
+    background-color: #e65c00;
+}
+
+/* Images de profil */
+.profile-img {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Sections */
+section {
+    border-radius: 15px;
+    background-color: white;
+    margin: 20px 0;
+    padding: 30px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Cards for projects */
+.card {
+    transition: transform 0.3s;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Formulaire */
+.form-control {
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Barre de progression */
+#progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 5px;
+    background-color: #ff6600;
+    z-index: 1000;
 }
