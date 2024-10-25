@@ -1,127 +1,89 @@
-/* Background and theme colors */
+/* Utilisation de la police manuscrite Dancing Script */
 body {
-    background-color: #f9f9f9;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Dancing Script', Arial, sans-serif;
+    background-color: #121212;
+    color: #E0E0E0;
+    overflow-x: hidden;
 }
 
-/* Effet de vague */
-.wave {
-    background: linear-gradient(to right, #ff6600, #ff8533);
-    height: 120px;
-    clip-path: polygon(0 100%, 100% 0, 100% 100%, 0 100%);
-    margin-top: -10px;
+/* Book-style layout */
+.book-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
 }
 
-/* Header style */
-header {
-    background-color: #ff6600;
-    color: white;
-    border-radius: 15px;
-    margin: 20px;
-    padding: 40px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-footer {
-    background-color: #222;
-    color: white;
-    border-radius: 15px;
-    margin: 20px;
+.page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 1s ease, opacity 0.5s ease;
+    position: relative;
+    z-index: 1;
 }
 
-/* Custom buttons */
+.left-page, .right-page {
+    background-color: #1E1E1E;
+    overflow: hidden;
+}
+
+.left-page {
+    transform-origin: right;
+}
+
+.right-page {
+    transform-origin: left;
+    border-left: 2px solid #2C2C2C;
+}
+
+/* Text and Button Styles */
+.main-title {
+    font-weight: 600;
+    font-size: 2.5rem;
+    color: #ff6600;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #E0E0E0;
+    text-align: center;
+}
+
+/* Buttons */
 .btn-custom {
     background-color: #ff6600;
-    border: none;
     color: white;
-    padding: 10px 20px;
+    border: none;
     border-radius: 25px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+    padding: 10px 20px;
+    transition: transform 0.3s ease;
+    margin-top: 20px;
 }
 
 .btn-custom:hover {
     background-color: #e65c00;
-    transform: scale(1.1);
-}
-
-/* Images */
-.profile-img {
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-}
-
-/* Zoom effect */
-.zoom-img:hover {
-    transform: scale(1.1);
-}
-
-/* Sections */
-section {
-    border-radius: 15px;
-    background-color: white;
-    margin: 20px 0;
-    padding: 30px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Cards */
-.card {
-    transition: transform 0.3s;
-    border-radius: 15px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.card:hover {
     transform: scale(1.05);
 }
 
-/* Formulaire */
-.form-control {
-    border: 1px solid #ddd;
-    border-radius: 15px;
-    padding: 10px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+/* Hidden Sections */
+.hidden-section {
+    display: none;
 }
 
-/* Barre de progression */
-#progress-bar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 5px;
-    background-color: #ff6600;
-    z-index: 1000;
-}
-
-/* Animation d'apparition */
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Animation de texte */
-.animate-text {
-    animation: text-appear 0.8s ease forwards;
+/* Animation pour ouverture */
+.open-left .left-page {
+    transform: rotateY(-180deg);
     opacity: 0;
 }
 
-@keyframes text-appear {
-    0% {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.open-right .right-page {
+    transform: rotateY(180deg);
+    opacity: 0;
 }
