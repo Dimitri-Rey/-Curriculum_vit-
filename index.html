@@ -3,72 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon CV - [Ton Nom]</title>
-    <!-- Intégration de Google Fonts pour la police manuscrite -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600&display=swap">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Portfolio de Dimitri Rey, technicien informatique passionné par les systèmes et réseaux.">
+    <title>Portfolio - Dimitri Rey</title>
+    <link rel="icon" href="assets/favicon.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body class="theme-dark">
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#a-propos">À propos</a></li>
+                <li><a href="#experience">Expérience</a></li>
+                <li><a href="#competences">Compétences</a></li>
+                <li><a href="#projets">Projets Réalisés</a></li>
+                <li><a href="#formation">Formation</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- Barre de progression -->
-    <div id="progress-bar"></div>
-
-    <!-- Section Livre avec effet d'ouverture -->
-    <div class="book-container">
-        <div class="page left-page">
-            <h1 class="main-title">Bienvenue</h1>
-            <p class="subtitle">"L'informatique est l'avenir, le droit est la règle."</p>
-            <button class="btn btn-custom open-left" onclick="openPage('about')">À propos</button>
-        </div>
-        <div class="page right-page">
-            <h1 class="main-title">Bienvenue</h1>
-            <p class="subtitle">Découvrez mes compétences et projets</p>
-            <button class="btn btn-custom open-right" onclick="openPage('skills')">Compétences</button>
-        </div>
-    </div>
-
-    <!-- Section À propos -->
-    <section id="about" class="py-5 fade-in hidden-section">
-        <div class="container">
-            <h2 class="section-title text-center mb-5">À propos de moi</h2>
-            <div class="row">
-                <div class="col-md-4 text-center">
-                    <img src="images/ton-image.jpg" alt="Photo de profil" class="img-fluid rounded-circle mb-4 profile-img">
-                </div>
-                <div class="col-md-8">
-                    <p>Je suis un développeur passionné par l'informatique et la programmation avec un intérêt marqué pour le droit et les technologies légales (LegalTech). Mon objectif est de combiner ces deux passions pour créer des solutions innovantes qui unissent la technologie et la loi.</p>
-                </div>
+    <main>
+        <section id="accueil" class="hero">
+            <div class="content">
+                <h1>Bienvenue dans mon univers numérique !</h1>
+                <p>Je suis Dimitri Rey, un technicien informatique passionné et engagé, spécialisé en systèmes et réseaux.</p>
+                <p class="motto">"Simplifier le complexe, sécuriser l'essentiel."</p>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Section Compétences -->
-    <section id="skills" class="py-5 bg-dark-alt fade-in hidden-section">
-        <div class="container">
-            <h2 class="section-title text-center mb-5">Compétences</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <h3 class="category-title">Frontend</h3>
-                    <ul>
-                        <li>HTML, CSS, JavaScript</li>
-                        <li>React, Bootstrap</li>
-                        <li>Responsive Design</li>
-                    </ul>
-                </div>
-                <div class="col-md-6">
-                    <h3 class="category-title">Backend</h3>
-                    <ul>
-                        <li>Node.js, Python</li>
-                        <li>SQL, MongoDB</li>
-                        <li>API REST, Authentication</li>
-                    </ul>
-                </div>
+        <section id="a-propos">
+            <h2>À propos</h2>
+            <p>Depuis mon premier contact avec un ordinateur, ma curiosité pour la technologie ne cesse de croître. Mon parcours est marqué par une diversité d'expériences, allant du support informatique à des missions de cybersécurité au sein de l'armée. Aujourd'hui, je me consacre aux systèmes réseaux avancés et à la cybersécurité.</p>
+        </section>
+
+        <section id="experience">
+            <h2>Expérience</h2>
+            <div class="experience-item">
+                <h3>Alternant Technicien Informatique</h3>
+                <p><strong>Oelis - Saint-Étienne (Actuel)</strong></p>
+                <ul>
+                    <li>Gestion et configuration de systèmes réseaux complexes.</li>
+                    <li>Résolution d'incidents critiques avec une approche orientée client.</li>
+                    <li>Formation des collaborateurs pour maximiser leur efficacité technologique.</li>
+                </ul>
             </div>
-        </div>
-    </section>
+            <div class="experience-item">
+                <h3>Assistant Informatique</h3>
+                <p><strong>Conseil départemental du Doubs (2022 - Présent)</strong></p>
+                <ul>
+                    <li>Installation et mise à jour des équipements (PC, réseaux, imprimantes).</li>
+                    <li>Réalisation de diagnostics approfondis pour résoudre les pannes.</li>
+                    <li>Suivi des tickets via GLPI et collaboration interservices.</li>
+                </ul>
+            </div>
+        </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <section id="competences">
+            <h2>Compétences</h2>
+            <ul>
+                <li><strong>Langages informatiques :</strong> Python, Bash/Shell, JavaScript, C, C++, PHP, SQL.</li>
+                <li><strong>Réseaux et sécurité :</strong> Cisco, MikroTik, Dell, D-Link, configuration avancée.</li>
+                <li><strong>Outils IT :</strong> GLPI, Teams, outils de prise en main à distance.</li>
+                <li><strong>Gestion de projets :</strong> Analyse des besoins, planification, gestion des risques et coordination d’équipes.</li>
+                <li><strong>Langues :</strong> Français (langue maternelle), Anglais (B2 - professionnel).</li>
+            </ul>
+        </section>
+
+        <section id="projets">
+            <h2>Projets Réalisés</h2>
+            <div class="project-item">
+                <h3>Optimisation de réseau pour une PME</h3>
+                <p>Déploiement d’un réseau robuste avec VLANs et accès sécurisés, augmentant la productivité de 30 %.</p>
+            </div>
+            <div class="project-item">
+                <h3>Formation à la sécurité informatique</h3>
+                <p>Formations sur les bonnes pratiques en cybersécurité (phishing, gestion des mots de passe).</p>
+            </div>
+            <div class="project-item">
+                <h3>Montage et optimisation de PC gaming haut de gamme</h3>
+                <p>Création de solutions techniques adaptées aux besoins spécifiques des gamers et créateurs de contenu.</p>
+            </div>
+        </section>
+
+        <section id="formation">
+            <h2>Formation</h2>
+            <ul>
+                <li>BTS SIO option SISR (en alternance) – Saint-Étienne</li>
+                <li>Faculté de Droit, Sorbonne (Paris 1) – Étudiant</li>
+                <li>Baccalauréat professionnel Systèmes numériques – Besançon</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Prêt à collaborer ou discuter ?</p>
+            <ul class="contact-list">
+                <li><i class="fas fa-phone"></i> 07 89 12 34 56</li>
+                <li><i class="fas fa-envelope"></i> contact@dimitri-rey.pro</li>
+                <li><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/dimitri-rey">linkedin.com/in/dimitri-rey</a></li>
+                <li><i class="fab fa-github"></i> <a href="https://github.com/dimitri-rey">github.com/dimitri-rey</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Dimitri Rey. Tous droits réservés.</p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
