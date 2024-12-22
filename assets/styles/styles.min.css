@@ -658,3 +658,82 @@
         min-height: 44px;
     }
 }
+
+/* Style du menu mobile */
+.nav-mobile {
+    display: none;  /* Caché par défaut, visible uniquement sur mobile */
+}
+
+@media (max-width: 768px) {
+    /* Cache le menu desktop */
+    .glass-nav {
+        display: none;
+    }
+    
+    /* Affiche le menu mobile */
+    .nav-mobile {
+        display: block;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        padding: 10px;
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    .nav-mobile ul {
+        display: flex;
+        justify-content: space-around;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-mobile li {
+        text-align: center;
+    }
+
+    .nav-mobile a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #2c3e50;
+        text-decoration: none;
+        font-size: 0.8rem;
+        padding: 8px;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+    }
+
+    .nav-mobile i {
+        font-size: 1.2rem;
+        margin-bottom: 4px;
+        color: #3498db;
+    }
+
+    .nav-mobile span {
+        font-size: 0.7rem;
+        font-weight: 500;
+    }
+
+    .nav-mobile a.active {
+        color: #3498db;
+        background: rgba(52, 152, 219, 0.1);
+    }
+
+    /* Ajustement pour le chat widget à cause du menu fixe en bas */
+    .chat-widget {
+        bottom: 70px;
+    }
+
+    .chat-bubble {
+        bottom: 80px;
+    }
+
+    .end-page-popup {
+        bottom: 80px;
+    }
+}
