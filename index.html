@@ -4,22 +4,22 @@
     <!-- [1] Meta Information de base -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Meta description conservée telle quelle -->
+    <!-- Meta description -->
     <meta name="description" content="Portfolio de Alex Garnier, spécialiste en ingénierie logicielle et intelligence artificielle.">
 
-    <!-- [2] Titre conservé (non modifié) -->
+    <!-- [2] Title (déjà rallongé pour un bon SEO) -->
     <title>Portfolio d’Alex Garnier : Ingénieur IA, Cloud, DevOps & Innovations Géniales</title>
 
-    <!-- [3] Balise meta robots (optionnel) -->
+    <!-- [3] Meta robots -->
     <meta name="robots" content="index, follow">
 
-    <!-- (Optionnel) Balise meta keywords (pas d'impact SEO sur Google, mais vous pouvez la conserver) -->
+    <!-- (Optionnel) Meta keywords (peu utile pour Google, possible pour Bing/Yahoo!) -->
     <meta name="keywords" content="ingénierie logicielle, IA, intelligence artificielle, Alex Garnier, portfolio, DevOps, cloud">
 
-    <!-- (Optionnel) Canonical (si vous avez une URL principale) -->
-    <!-- <link rel="canonical" href="https://votre-site.com/portfolio-alex-garnier"> -->
+    <!-- (Optionnel) Canonical -->
+    <!-- <link rel="canonical" href="https://votre-site.com/portfolio-alex-garnier" /> -->
 
-    <!-- [4] Balises Open Graph & Twitter Card pour le partage sur les réseaux sociaux (modifiez si besoin) -->
+    <!-- [4] Open Graph / Twitter Card -->
     <meta property="og:title" content="Portfolio - Alex Garnier">
     <meta property="og:description" content="Portfolio de Alex Garnier, spécialiste en ingénierie logicielle et intelligence artificielle.">
     <meta property="og:image" content="https://votre-site.com/assets/images/cover.jpg">
@@ -31,25 +31,44 @@
     <meta name="twitter:description" content="Portfolio de Alex Garnier, spécialiste en ingénierie logicielle et intelligence artificielle.">
     <meta name="twitter:image" content="https://votre-site.com/assets/images/cover.jpg">
 
-    <!-- [5] Preload / Preconnect pour Google Fonts (optimisation de chargement) -->
+    <!-- [5] Google Fonts : Preconnect / Preload -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap">
+    <!-- Si vous hébergez localement vos polices plus tard, vous pourrez supprimer ces 2 lignes ci-dessus -->
+
+    <!-- [6] Feuille de style principale en preload -->
+    <!-- Astuce : charger la CSS en "preload" + media="print" pour réduire le blocking -->
+    <link rel="preload" as="style" href="assets/styles/styles.min.css">
+    <link 
+      href="assets/styles/styles.min.css" 
+      rel="stylesheet" 
+      media="print" 
+      onload="this.media='all'"
+    >
+    <noscript>
+      <link href="assets/styles/styles.min.css" rel="stylesheet">
+    </noscript>
+
+    <!-- [7] Police d'écriture (Google Fonts) via media="print" + onload (optionnel, déjà dans l’exemple précédent) -->
+    <link 
+      rel="preload" 
+      as="style" 
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+    >
     <link 
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" 
       rel="stylesheet" 
       media="print" 
-      onload="this.media='all'">
+      onload="this.media='all'"
+    >
     <noscript>
       <link 
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" 
-        rel="stylesheet">
+        rel="stylesheet"
+      >
     </noscript>
 
-    <!-- [6] Feuille de style principale (inchangée, sauf si vous la minifiez par ailleurs) -->
-    <link rel="stylesheet" href="assets/styles/styles.min.css">
-
-    <!-- [7] Favicon -->
+    <!-- [8] Favicon -->
     <link rel="icon" href="assets/images/favicon.png" type="image/png">
 </head>
 <body>
@@ -236,7 +255,7 @@
         </div>
     </footer>
 
-    <!-- JavaScript -->
-    <script src="assets/js/script.min.js"></script>
+    <!-- JavaScript : script minifié en defer -->
+    <script src="assets/js/script.min.js" defer></script>
 </body>
 </html>
