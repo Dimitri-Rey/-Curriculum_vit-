@@ -72,27 +72,33 @@
     <link rel="icon" href="assets/images/favicon.png" type="image/png">
 </head>
 <body>
-    <!-- Header Section -->
+    <!-- Header avec message de bienvenue et effet hacker -->
     <header>
         <div class="container">
-            <h1><span id="typing-text"></span><span class="cursor">|</span></h1>
-            <p>Je suis <strong>Alex Garnier</strong>, un spécialiste en ingénierie logicielle et intelligence artificielle, passionné par les technologies qui transforment notre monde.</p>
-            <p>Ma devise : <em>"L'innovation au service de l'humain."</em></p>
+            <div class="welcome-text">
+                <h1 class="hacker-text" data-text="Bienvenue sur le Portfolio d'Alex Garnier">Bienvenue sur le Portfolio d'Alex Garnier</h1>
+                <p class="subtitle">Ingénieur IA, Cloud, DevOps & Innovations Géniales</p>
+                <p class="tagline">"Transformer des idées complexes en solutions élégantes"</p>
+                <div class="typed-text">
+                    <span id="typed"></span>
+                    <span class="cursor">|</span>
+                </div>
+            </div>
         </div>
+        <div class="particles"></div>
     </header>
 
-    <!-- Navigation Menu -->
-    <nav>
+    <!-- Navigation moderne -->
+    <nav class="modern-nav">
         <div class="container">
-            <ul>
-                <li><a href="#about">À propos</a></li>
-                <li><a href="#experience">Expérience</a></li>
-                <li><a href="#skills">Compétences</a></li>
-                <li><a href="#projects">Projets Réalisés</a></li>
-                <li><a href="#education">Formation</a></li>
-                <li><a href="#testimonials">Témoignages</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <ul class="nav-list">
+                <li><a href="#about" class="nav-link"><i class="fas fa-user"></i><span>À propos</span></a></li>
+                <li><a href="#experience" class="nav-link"><i class="fas fa-briefcase"></i><span>Expérience</span></a></li>
+                <li><a href="#skills" class="nav-link"><i class="fas fa-code"></i><span>Compétences</span></a></li>
+                <li><a href="#projects" class="nav-link"><i class="fas fa-project-diagram"></i><span>Projets</span></a></li>
+                <li><a href="#education" class="nav-link"><i class="fas fa-graduation-cap"></i><span>Formation</span></a></li>
+                <li><a href="#blog" class="nav-link"><i class="fas fa-blog"></i><span>Blog</span></a></li>
+                <li><a href="#contact" class="nav-link"><i class="fas fa-envelope"></i><span>Contact</span></a></li>
             </ul>
         </div>
     </nav>
@@ -112,55 +118,73 @@
         <section id="experience" class="section">
             <div class="container">
                 <h2>Expérience</h2>
-                <div class="timeline">
-                    <div class="timeline-item fade-in">
-                        <div class="timeline-content">
-                            <div class="timeline-date">2021 - Présent</div>
-                            <h3>Architecte en Intelligence Artificielle</h3>
-                            <p><strong>NeuralTech Labs</strong> - Paris</p>
-                            <p>Direction de projets IA innovants et supervision d'une équipe de chercheurs en machine learning.</p>
+                <div class="experience-path">
+                    <div class="experience-node">
+                        <div class="experience-dot"></div>
+                        <div class="experience-content">
+                            <div class="experience-date">2021 - Présent</div>
+                            <h3>Lead AI Engineer</h3>
+                            <p><strong>NeuralTech Labs</strong></p>
+                            <p>Direction équipe IA, +40% performance</p>
                         </div>
                     </div>
                     
-                    <div class="timeline-item fade-in">
-                        <div class="timeline-content">
-                            <div class="timeline-date">2015 - 2021</div>
-                            <h3>Ingénieur en Développement Logiciel Senior</h3>
-                            <p><strong>CodeGen Solutions</strong> - Lyon</p>
-                            <p>Développement d'applications SaaS et implémentation de solutions DevOps innovantes.</p>
+                    <div class="experience-node">
+                        <div class="experience-dot"></div>
+                        <div class="experience-content">
+                            <div class="experience-date">2018 - 2021</div>
+                            <h3>Senior Dev</h3>
+                            <p><strong>TechForward</strong></p>
+                            <p>Lead Full Stack, -60% coûts</p>
                         </div>
                     </div>
                     
-                    <div class="timeline-item fade-in">
-                        <div class="timeline-content">
-                            <div class="timeline-date">2014</div>
-                            <h3>Stage en Recherche IA</h3>
-                            <p><strong>Université de Stanford</strong> - Californie</p>
-                            <p>Recherche sur les réseaux neuronaux et publication scientifique.</p>
+                    <div class="experience-node">
+                        <div class="experience-dot"></div>
+                        <div class="experience-content">
+                            <div class="experience-date">2015 - 2018</div>
+                            <h3>DevOps</h3>
+                            <p><strong>CloudScale</strong></p>
+                            <p>99.99% uptime, CI/CD</p>
+                        </div>
+                    </div>
+                    
+                    <div class="experience-node">
+                        <div class="experience-dot"></div>
+                        <div class="experience-content">
+                            <div class="experience-date">2014</div>
+                            <h3>AI Research</h3>
+                            <p><strong>Stanford</strong></p>
+                            <p>Deep Learning, Publication</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Stats Section -->
         <section id="stats" class="section">
             <div class="container">
                 <div class="stats-grid">
-                    <div class="stat-item">
-                        <span class="counter" data-value="3">0</span>
+                    <div class="stat-item animate-on-scroll">
+                        <span class="counter" data-value="10">0</span>
                         <p>Années d'Expérience</p>
+                        <i class="fas fa-history stat-icon"></i>
                     </div>
-                    <div class="stat-item">
-                        <span class="counter" data-value="12">0</span>
+                    <div class="stat-item animate-on-scroll">
+                        <span class="counter" data-value="50">0</span>
                         <p>Projets Réalisés</p>
+                        <i class="fas fa-project-diagram stat-icon"></i>
                     </div>
-                    <div class="stat-item">
-                        <span class="counter" data-value="8">0</span>
+                    <div class="stat-item animate-on-scroll">
+                        <span class="counter" data-value="25">0</span>
                         <p>Clients Satisfaits</p>
+                        <i class="fas fa-smile-beam stat-icon"></i>
                     </div>
-                    <div class="stat-item">
-                        <span class="counter" data-value="15">0</span>
+                    <div class="stat-item animate-on-scroll">
+                        <span class="counter" data-value="20">0</span>
                         <p>Technologies Maîtrisées</p>
+                        <i class="fas fa-code stat-icon"></i>
                     </div>
                 </div>
             </div>
@@ -174,10 +198,21 @@
                     <!-- Languages -->
                     <div class="skill-category">
                         <h3>Langages & Frameworks</h3>
-                        <div class="skill-item" data-tooltip="Développement d'APIs REST, ML/DL, Automatisation">
+                        <div class="skill-item" data-tooltip="Machine Learning, APIs REST, Data Science">
                             <i class="fab fa-python"></i>
                             <div class="skill-info">
                                 <span class="skill-name">Python</span>
+                                <span class="skill-badge">Expert</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item" data-tooltip="React, Vue.js, Node.js, TypeScript">
+                            <i class="fab fa-js"></i>
+                            <div class="skill-info">
+                                <span class="skill-name">JavaScript</span>
                                 <span class="skill-badge">Expert</span>
                             </div>
                             <div class="skill-bar">
@@ -185,25 +220,84 @@
                             </div>
                         </div>
 
-                        <div class="skill-item" data-tooltip="Applications React, Next.js, Vue.js">
-                            <i class="fab fa-js"></i>
+                        <div class="skill-item" data-tooltip="Spring Boot, Microservices, JPA">
+                            <i class="fab fa-java"></i>
                             <div class="skill-info">
-                                <span class="skill-name">JavaScript</span>
+                                <span class="skill-name">Java</span>
                                 <span class="skill-badge">Avancé</span>
                             </div>
                             <div class="skill-bar">
                                 <div class="skill-progress" style="width: 85%"></div>
                             </div>
                         </div>
+
+                        <div class="skill-item" data-tooltip="Laravel, Symfony, API Platform">
+                            <i class="fab fa-php"></i>
+                            <div class="skill-info">
+                                <span class="skill-name">PHP</span>
+                                <span class="skill-badge">Intermédiaire</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
                     </div>
 
-                    <!-- Cloud -->
+                    <!-- Frontend -->
+                    <div class="skill-category">
+                        <h3>Frontend & Design</h3>
+                        <div class="skill-item" data-tooltip="Components, Hooks, Redux, Next.js">
+                            <i class="fab fa-react"></i>
+                            <div class="skill-info">
+                                <span class="skill-name">React</span>
+                                <span class="skill-badge">Expert</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 92%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item" data-tooltip="Vuex, Composition API, Nuxt.js">
+                            <i class="fab fa-vuejs"></i>
+                            <div class="skill-info">
+                                <span class="skill-name">Vue.js</span>
+                                <span class="skill-badge">Avancé</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 88%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item" data-tooltip="Responsive Design, Animations, Sass">
+                            <i class="fab fa-css3-alt"></i>
+                            <div class="skill-info">
+                                <span class="skill-name">CSS/SCSS</span>
+                                <span class="skill-badge">Expert</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cloud & DevOps -->
                     <div class="skill-category">
                         <h3>Cloud & DevOps</h3>
-                        <div class="skill-item" data-tooltip="Architecture Serverless, Lambda, S3, EC2">
+                        <div class="skill-item" data-tooltip="Lambda, S3, EC2, ECS, CloudFormation">
                             <i class="fab fa-aws"></i>
                             <div class="skill-info">
                                 <span class="skill-name">AWS</span>
+                                <span class="skill-badge">Expert</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item" data-tooltip="Conteneurisation, Orchestration">
+                            <i class="fab fa-docker"></i>
+                            <div class="skill-info">
+                                <span class="skill-name">Docker/K8s</span>
                                 <span class="skill-badge">Expert</span>
                             </div>
                             <div class="skill-bar">
@@ -211,14 +305,14 @@
                             </div>
                         </div>
 
-                        <div class="skill-item" data-tooltip="CI/CD, Docker, Kubernetes">
-                            <i class="fab fa-docker"></i>
+                        <div class="skill-item" data-tooltip="CI/CD, Actions, Pages">
+                            <i class="fab fa-github"></i>
                             <div class="skill-info">
-                                <span class="skill-name">DevOps</span>
-                                <span class="skill-badge">Avancé</span>
+                                <span class="skill-name">GitHub</span>
+                                <span class="skill-badge">Expert</span>
                             </div>
                             <div class="skill-bar">
-                                <div class="skill-progress" style="width: 82%"></div>
+                                <div class="skill-progress" style="width: 95%"></div>
                             </div>
                         </div>
                     </div>
@@ -226,7 +320,7 @@
                     <!-- AI/ML -->
                     <div class="skill-category">
                         <h3>Intelligence Artificielle</h3>
-                        <div class="skill-item" data-tooltip="Deep Learning, NLP, Computer Vision">
+                        <div class="skill-item" data-tooltip="TensorFlow, PyTorch, Scikit-learn">
                             <i class="fas fa-brain"></i>
                             <div class="skill-info">
                                 <span class="skill-name">Machine Learning</span>
@@ -236,39 +330,124 @@
                                 <div class="skill-progress" style="width: 92%"></div>
                             </div>
                         </div>
+
+                        <div class="skill-item" data-tooltip="BERT, GPT, Transformers">
+                            <i class="fas fa-language"></i>
+                            <div class="skill-info">
+                                <span class="skill-name">NLP</span>
+                                <span class="skill-badge">Avancé</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item" data-tooltip="CNN, Object Detection, OpenCV">
+                            <i class="fas fa-eye"></i>
+                            <div class="skill-info">
+                                <span class="skill-name">Computer Vision</span>
+                                <span class="skill-badge">Avancé</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Projects Section -->
-        <section id="projects" class="section">
+        <!-- Section Formation -->
+        <section id="education" class="section">
             <div class="container">
-                <h2>Projets Réalisés</h2>
-                <div class="project">
-                    <h3>Plateforme d'Analyse Prédictive pour la Santé</h3>
-                    <p>Développement d'une plateforme utilisant le machine learning pour prédire les maladies chroniques à partir des données des patients. Succès : amélioration de 25 % des diagnostics précoces.</p>
-                </div>
-                <div class="project">
-                    <h3>Système de Recommandation pour E-commerce</h3>
-                    <p>Création d'un moteur de recommandations basé sur l'IA pour un grand site de vente en ligne. Résultat : augmentation de 35 % des ventes.</p>
-                </div>
-                <div class="project">
-                    <h3>Application de Gestion Énergétique</h3>
-                    <p>Conception d'une application mobile pour optimiser la consommation énergétique des foyers, intégrant des technologies IoT et cloud.</p>
+                <h2>Formation</h2>
+                <div class="education-timeline">
+                    <div class="education-card">
+                        <div class="education-year">2020</div>
+                        <div class="education-content">
+                            <h3>Doctorat en Intelligence Artificielle</h3>
+                            <p>Université de Paris</p>
+                            <span class="education-badge">Intelligence Artificielle</span>
+                            <p class="education-details">Spécialisation en Deep Learning et Computer Vision</p>
+                        </div>
+                    </div>
+
+                    <div class="education-card">
+                        <div class="education-year">2017</div>
+                        <div class="education-content">
+                            <h3>Master en Informatique</h3>
+                            <p>École Polytechnique</p>
+                            <span class="education-badge">Computer Science</span>
+                            <p class="education-details">Major de promotion - Mention Très Bien</p>
+                        </div>
+                    </div>
+
+                    <div class="education-card">
+                        <div class="education-year">2015</div>
+                        <div class="education-content">
+                            <h3>Licence en Mathématiques</h3>
+                            <p>ENS Lyon</p>
+                            <span class="education-badge">Mathématiques</span>
+                            <p class="education-details">Spécialisation en Algèbre et Analyse Numérique</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Education Section -->
-        <section id="education" class="section">
+        <!-- Section Projets -->
+        <section id="projects" class="section">
             <div class="container">
-                <h2>Formation</h2>
-                <ul>
-                    <li>Doctorat en Intelligence Artificielle - Université de Paris (2020)</li>
-                    <li>Master en Informatique - Université de Lyon (2015)</li>
-                    <li>Licence en Informatique - Université d'Aix-Marseille (2013)</li>
-                </ul>
+                <h2>Projets Réalisés</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-header">
+                            <i class="fas fa-brain project-icon"></i>
+                            <span class="project-badge">IA & Santé</span>
+                        </div>
+                        <div class="project-content">
+                            <h3>HealthPredict AI</h3>
+                            <p>Système de prédiction pour le diagnostic précoce utilisant le Deep Learning</p>
+                            <div class="project-tech">
+                                <span>Python</span>
+                                <span>TensorFlow</span>
+                                <span>AWS</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <i class="fas fa-cloud project-icon"></i>
+                            <span class="project-badge">Cloud & DevOps</span>
+                        </div>
+                        <div class="project-content">
+                            <h3>CloudScale Platform</h3>
+                            <p>Plateforme d'auto-scaling pour applications microservices</p>
+                            <div class="project-tech">
+                                <span>Kubernetes</span>
+                                <span>Docker</span>
+                                <span>Go</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <i class="fas fa-robot project-icon"></i>
+                            <span class="project-badge">NLP</span>
+                        </div>
+                        <div class="project-content">
+                            <h3>SmartBot NLP</h3>
+                            <p>Assistant virtuel multilingue avec compréhension contextuelle</p>
+                            <div class="project-tech">
+                                <span>BERT</span>
+                                <span>PyTorch</span>
+                                <span>FastAPI</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -287,31 +466,53 @@
             </div>
         </section>
 
-        <!-- Blog Section -->
+        <!-- Blog Section modernisée -->
         <section id="blog" class="section">
             <div class="container">
                 <h2>Blog</h2>
-                <article>
-                    <h3>Les 5 Tendances de l'IA à Surveiller en 2024</h3>
-                    <p>Un aperçu des avancées dans l'intelligence artificielle, de l'apprentissage fédéré à l'IA générative.</p>
-                    <a href="#">Lire l'article</a>
-                </article>
-                <article>
-                    <h3>Éthique et IA : Où en Sommes-Nous ?</h3>
-                    <p>Une réflexion sur les enjeux éthiques dans le développement de l'intelligence artificielle.</p>
-                    <a href="#">Lire l'article</a>
-                </article>
+                <div class="blog-grid">
+                    <article class="blog-card">
+                        <div class="blog-image">
+                            <div class="blog-category">IA</div>
+                        </div>
+                        <div class="blog-content">
+                            <h3>Les 5 Tendances de l'IA en 2024</h3>
+                            <p>Un aperçu des avancées dans l'intelligence artificielle...</p>
+                            <a href="#" class="read-more">Lire l'article <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                    <!-- Répéter pour autres articles -->
+                </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
+        <!-- Contact Section modernisée -->
         <section id="contact" class="section">
             <div class="container">
                 <h2>Contact</h2>
-                <p><strong>Téléphone :</strong> 07 89 45 67 12</p>
-                <p><strong>Email :</strong> alex.garnier@techpro.com</p>
-                <p><strong>LinkedIn :</strong> <a href="https://linkedin.com/in/alex-garnier">linkedin.com/in/alex-garnier</a></p>
-                <p><strong>GitHub :</strong> <a href="https://github.com/alex-garnier">github.com/alex-garnier</a></p>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div class="contact-details">
+                                <h3>Téléphone</h3>
+                                <p>07 89 45 67 12</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div class="contact-details">
+                                <h3>Email</h3>
+                                <p>alex.garnier@techpro.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-social">
+                            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -347,5 +548,19 @@
     <script src="assets/js/script.min.js" defer></script>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Ajouter la notification du chat IA -->
+    <div class="chat-notification" id="chatNotification">
+        <div class="notification-content">
+            <i class="fas fa-robot"></i>
+            <div class="notification-text">
+                <h4>Assistant IA disponible !</h4>
+                <p>Posez-moi vos questions sur Alex 👋</p>
+            </div>
+            <button class="notification-close" onclick="dismissNotification()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
 </body>
 </html>
