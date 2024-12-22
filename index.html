@@ -1,6 +1,27 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <style>
+        /* CSS critique pour le header et le layout principal */
+        body {
+            background-color: #f5f6fa;
+            color: #2c3e50;
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #3498db;
+            color: #fff;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        /* Ajoutez d'autres styles critiques ici */
+    </style>
+    <!-- Lien vers le reste du CSS -->
+    <link rel="preload" as="style" href="assets/styles/styles.min.css" onload="this.rel='stylesheet'">
+    <noscript>
+        <link href="assets/styles/styles.min.css" rel="stylesheet">
+    </noscript>
     <!-- 
     [1] META INFOS DE BASE
     Définition du charset, de l'affichage responsive et de la description pour le référencement.
@@ -98,17 +119,12 @@
     <link 
         rel="preload" 
         as="style" 
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
-    >
-    <link 
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" 
-        rel="stylesheet" 
-        media="print" 
-        onload="this.media='all'"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" 
+        onload="this.rel='stylesheet'"
     >
     <noscript>
         <link 
-            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" 
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" 
             rel="stylesheet"
         >
     </noscript>
@@ -129,8 +145,16 @@
     -->
     <link 
         rel="stylesheet" 
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" 
+        media="print" 
+        onload="this.media='all'"
     >
+    <noscript>
+        <link 
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" 
+            rel="stylesheet"
+        >
+    </noscript>
 
     <!-- 
     OPTIMISATIONS HTML SUPPLÉMENTAIRES
@@ -850,12 +874,14 @@
                 <div class="container">
                     <h2>Contact</h2>
                     <div class="contact-grid">
+                        <!-- Informations de contact -->
                         <div class="contact-info">
                             <div class="contact-item">
                                 <i class="fas fa-phone"></i>
                                 <div class="contact-details">
                                     <h3>Téléphone</h3>
                                     <p>07 89 45 67 12</p>
+                                    <span class="availability">Disponible en semaine 9h-18h</span>
                                 </div>
                             </div>
                             <div class="contact-item">
@@ -863,19 +889,73 @@
                                 <div class="contact-details">
                                     <h3>Email</h3>
                                     <p>alex.garnier@techpro.com</p>
+                                    <span class="availability">Réponse sous 24h</span>
                                 </div>
                             </div>
-                            <div class="contact-social">
-                                <a href="#" class="social-link">
-                                    <i class="fab fa-linkedin"></i>
-                                </a>
-                                <a href="#" class="social-link">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                                <a href="#" class="social-link">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div class="contact-details">
+                                    <h3>Localisation</h3>
+                                    <p>Paris, France</p>
+                                    <span class="availability">Disponible en présentiel/remote</span>
+                                </div>
                             </div>
+                        </div>
+
+                        <!-- Formulaire de contact -->
+                        <div class="contact-form">
+                            <h3>Envoyez-moi un message</h3>
+                            <form id="contactForm">
+                                <div class="form-group">
+                                    <label for="name">Nom complet</label>
+                                    <input type="text" id="name" name="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="subject">Sujet</label>
+                                    <select id="subject" name="subject" required>
+                                        <option value="">Choisissez un sujet</option>
+                                        <option value="projet">Nouveau projet</option>
+                                        <option value="collaboration">Proposition de collaboration</option>
+                                        <option value="conseil">Demande de conseil</option>
+                                        <option value="autre">Autre</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Message</label>
+                                    <textarea id="message" name="message" rows="5" required></textarea>
+                                </div>
+                                <button type="submit" class="submit-btn">
+                                    <span>Envoyer</span>
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Réseaux sociaux -->
+                    <div class="social-links">
+                        <h3>Retrouvez-moi sur</h3>
+                        <div class="social-grid">
+                            <a href="#" class="social-item" title="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="#" class="social-item" title="GitHub">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="#" class="social-item" title="Twitter">
+                                <i class="fab fa-twitter"></i>
+                                <span>Twitter</span>
+                            </a>
+                            <a href="#" class="social-item" title="Medium">
+                                <i class="fab fa-medium"></i>
+                                <span>Medium</span>
+                            </a>
                         </div>
                     </div>
                 </div>
