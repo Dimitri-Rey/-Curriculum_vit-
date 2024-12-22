@@ -637,6 +637,26 @@
             <i class="fas fa-envelope"></i>
             <span>Me contacter</span>
         </a>
+
+        <div class="end-page-popup" id="endPagePopup">
+            <p>Vous voulez plus d'information ? Je vous propose de les poser à mon IA</p>
+            <button onclick="openChatBot()" class="btn-primary">Discuter avec l'IA</button>
+        </div>
+
+        <script>
+        document.addEventListener('scroll', function() {
+            // Vérifie si l'utilisateur est proche du bas de la page
+            if ((window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight - 100) {
+                document.getElementById('endPagePopup').style.display = 'block';
+            }
+        });
+
+        function openChatBot() {
+            // Ouvre le chat bot et ferme le popup
+            document.querySelector('.chat-box').classList.add('active');
+            document.getElementById('endPagePopup').style.display = 'none';
+        }
+        </script>
     </div>
 </body>
 </html>
