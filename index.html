@@ -170,29 +170,73 @@
         <section id="skills" class="section">
             <div class="container">
                 <h2>Compétences</h2>
-                <div class="skills">
-                    <h3>Techniques</h3>
-                    <ul>
-                        <li>Langages : Python, Java, R, JavaScript, TensorFlow, PyTorch.</li>
-                        <li>Cloud : AWS, Azure, Google Cloud, outils d'orchestration.</li>
-                        <li>Outils IA : OpenAI API, Scikit-learn, Keras, NLP avancé.</li>
-                    </ul>
-                </div>
-                <div class="skills">
-                    <h3>Gestion et Leadership</h3>
-                    <ul>
-                        <li>Direction d'équipes de R&D en IA.</li>
-                        <li>Gestion de projets en méthodologie Agile/Scrum.</li>
-                        <li>Mentorat et formation continue.</li>
-                    </ul>
-                </div>
-                <div class="skills">
-                    <h3>Langues</h3>
-                    <ul>
-                        <li>Français : langue maternelle.</li>
-                        <li>Anglais : bilingue (C2).</li>
-                        <li>Espagnol : niveau avancé (C1).</li>
-                    </ul>
+                <div class="skills-grid">
+                    <!-- Languages -->
+                    <div class="skill-category">
+                        <h3>Langages & Frameworks</h3>
+                        <div class="skill-item" data-tooltip="Développement d'APIs REST, ML/DL, Automatisation">
+                            <i class="fab fa-python"></i>
+                            <div class="skill-info">
+                                <span class="skill-name">Python</span>
+                                <span class="skill-badge">Expert</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item" data-tooltip="Applications React, Next.js, Vue.js">
+                            <i class="fab fa-js"></i>
+                            <div class="skill-info">
+                                <span class="skill-name">JavaScript</span>
+                                <span class="skill-badge">Avancé</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cloud -->
+                    <div class="skill-category">
+                        <h3>Cloud & DevOps</h3>
+                        <div class="skill-item" data-tooltip="Architecture Serverless, Lambda, S3, EC2">
+                            <i class="fab fa-aws"></i>
+                            <div class="skill-info">
+                                <span class="skill-name">AWS</span>
+                                <span class="skill-badge">Expert</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 88%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item" data-tooltip="CI/CD, Docker, Kubernetes">
+                            <i class="fab fa-docker"></i>
+                            <div class="skill-info">
+                                <span class="skill-name">DevOps</span>
+                                <span class="skill-badge">Avancé</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 82%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- AI/ML -->
+                    <div class="skill-category">
+                        <h3>Intelligence Artificielle</h3>
+                        <div class="skill-item" data-tooltip="Deep Learning, NLP, Computer Vision">
+                            <i class="fas fa-brain"></i>
+                            <div class="skill-info">
+                                <span class="skill-name">Machine Learning</span>
+                                <span class="skill-badge">Expert</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 92%"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
