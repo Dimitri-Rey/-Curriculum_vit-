@@ -1,81 +1,159 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <!-- [1] Meta Information de base -->
+    <!-- 
+    [1] META INFOS DE BASE
+    Définition du charset, de l'affichage responsive et de la description pour le référencement.
+    -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Meta description -->
-    <meta name="description" content="Portfolio de Alex Garnier, spécialiste en ingénierie logicielle et intelligence artificielle.">
+    <meta 
+        name="description" 
+        content="Portfolio de Alex Garnier, spécialiste en ingénierie logicielle et intelligence artificielle."
+    >
 
-    <!-- [2] Title (déjà rallongé pour un bon SEO) -->
+    <!-- 
+    [2] TITRE DE LA PAGE
+    Le titre a été volontairement allongé pour un meilleur SEO.
+    -->
     <title>Portfolio d’Alex Garnier : Ingénieur IA, Cloud, DevOps & Innovations Géniales</title>
 
-    <!-- [3] Meta robots -->
+    <!-- 
+    [3] META ROBOTS
+    Permet aux moteurs de recherche d'indexer la page et de suivre les liens.
+    -->
     <meta name="robots" content="index, follow">
 
-    <!-- (Optionnel) Meta keywords (peu utile pour Google, possible pour Bing/Yahoo!) -->
-    <meta name="keywords" content="ingénierie logicielle, IA, intelligence artificielle, Alex Garnier, portfolio, DevOps, cloud">
+    <!-- 
+    (Optionnel) META KEYWORDS
+    Utile surtout pour Bing/Yahoo!, moins pour Google aujourd'hui.
+    -->
+    <meta 
+        name="keywords" 
+        content="ingénierie logicielle, IA, intelligence artificielle, Alex Garnier, portfolio, DevOps, cloud"
+    >
 
-    <!-- (Optionnel) Canonical -->
+    <!-- 
+    (Optionnel) CANONICAL
+    Indique la version canonique de la page (utile en cas de duplication).
+    -->
     <!-- <link rel="canonical" href="https://votre-site.com/portfolio-alex-garnier" /> -->
 
-    <!-- [4] Open Graph / Twitter Card -->
+    <!-- 
+    [4] OPEN GRAPH / TWITTER CARD
+    Optimise le partage sur les réseaux sociaux (Facebook, Twitter, LinkedIn...).
+    -->
     <meta property="og:title" content="Portfolio - Alex Garnier">
-    <meta property="og:description" content="Portfolio de Alex Garnier, spécialiste en ingénierie logicielle et intelligence artificielle.">
-    <meta property="og:image" content="https://votre-site.com/assets/images/cover.jpg">
-    <meta property="og:url" content="https://votre-site.com/portfolio-alex-garnier">
+    <meta 
+        property="og:description" 
+        content="Portfolio de Alex Garnier, spécialiste en ingénierie logicielle et intelligence artificielle."
+    >
+    <meta 
+        property="og:image" 
+        content="https://votre-site.com/assets/images/cover.jpg"
+    >
+    <meta 
+        property="og:url" 
+        content="https://votre-site.com/portfolio-alex-garnier"
+    >
     <meta property="og:type" content="website">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Portfolio - Alex Garnier">
-    <meta name="twitter:description" content="Portfolio de Alex Garnier, spécialiste en ingénierie logicielle et intelligence artificielle.">
-    <meta name="twitter:image" content="https://votre-site.com/assets/images/cover.jpg">
+    <meta 
+        name="twitter:description" 
+        content="Portfolio de Alex Garnier, spécialiste en ingénierie logicielle et intelligence artificielle."
+    >
+    <meta 
+        name="twitter:image" 
+        content="https://votre-site.com/assets/images/cover.jpg"
+    >
 
-    <!-- [5] Google Fonts : Preconnect / Preload -->
+    <!-- 
+    [5] GOOGLE FONTS : PRECONNECT / PRELOAD
+    Accélère la connexion aux serveurs pour les polices d'écriture.
+    -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <!-- Si vous hébergez localement vos polices plus tard, vous pourrez supprimer ces 2 lignes ci-dessus -->
 
-    <!-- [6] Feuille de style principale en preload -->
-    <!-- Astuce : charger la CSS en "preload" + media="print" pour réduire le blocking -->
+    <!-- 
+    [6] FEUILLE DE STYLE PRINCIPALE (styles.min.css)
+    Astuce : charger le CSS en preload + media="print" pour réduire le temps de blocage.
+    -->
     <link rel="preload" as="style" href="assets/styles/styles.min.css">
     <link 
-      href="assets/styles/styles.min.css" 
-      rel="stylesheet" 
-      media="print" 
-      onload="this.media='all'"
+        href="assets/styles/styles.min.css" 
+        rel="stylesheet" 
+        media="print" 
+        onload="this.media='all'"
     >
     <noscript>
-      <link href="assets/styles/styles.min.css" rel="stylesheet">
+        <link href="assets/styles/styles.min.css" rel="stylesheet">
     </noscript>
 
-    <!-- [7] Police d'écriture (Google Fonts) via media="print" + onload (optionnel, déjà dans l'exemple précédent) -->
+    <!-- 
+    [7] POLICE D'ÉCRITURE (GOOGLE FONTS) VIA media="print" + onload
+    Encore une fois pour optimiser le rendu (facultatif).
+    -->
     <link 
-      rel="preload" 
-      as="style" 
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+        rel="preload" 
+        as="style" 
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
     >
     <link 
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" 
-      rel="stylesheet" 
-      media="print" 
-      onload="this.media='all'"
-    >
-    <noscript>
-      <link 
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" 
-        rel="stylesheet"
-      >
+        rel="stylesheet" 
+        media="print" 
+        onload="this.media='all'"
+    >
+    <noscript>
+        <link 
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" 
+            rel="stylesheet"
+        >
     </noscript>
 
-    <!-- [8] Favicon -->
-    <link rel="icon" href="assets/images/favicon.png" type="image/png">
+    <!-- 
+    [8] FAVICON
+    Petite icône associée au site dans l'onglet du navigateur.
+    -->
+    <link 
+        rel="icon" 
+        href="assets/images/favicon.png" 
+        type="image/png"
+    >
 
-    <!-- Font Awesome (déplacé dans le head pour meilleures pratiques) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- 
+    FONT AWESOME
+    Placé dans le head pour respecter les bonnes pratiques et éviter le FOUC des icônes.
+    -->
+    <link 
+        rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    >
+
+    <!-- 
+    OPTIMISATIONS HTML SUPPLÉMENTAIRES
+    Preload de la font et du style (optionnel).
+    -->
+    <link 
+        rel="preload" 
+        as="font" 
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" 
+        crossorigin
+    >
+    <link 
+        rel="preload" 
+        as="style" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    >
 </head>
+
 <body>
-    <!-- Terminal Loading Screen -->
+    <!-- 
+    [1] ÉCRAN DE CHARGEMENT (TERMINAL)
+    Affiche un effet de "terminal" avant la génération du portfolio.
+    -->
     <div class="terminal-loader" id="terminalLoader">
         <div class="terminal-window">
             <div class="terminal-bar">
@@ -92,20 +170,28 @@
                         <span class="prompt">$</span> 
                         <span class="command">initialize portfolio_generator</span>
                     </div>
-                    <div class="line">Initialisation du générateur de portfolio...</div>
+                    <div class="line">
+                        Initialisation du générateur de portfolio...
+                    </div>
                     <div class="line">
                         <span class="prompt">$</span> 
                         <span class="security">Veuillez compléter le captcha de sécurité :</span>
                     </div>
                     <div class="captcha-container">
                         <div id="captchaText"></div>
-                        <input type="text" id="captchaInput" placeholder="Entrez le captcha">
+                        <input 
+                            type="text" 
+                            id="captchaInput" 
+                            placeholder="Entrez le captcha"
+                        >
                         <button id="validateCaptcha">Valider</button>
                     </div>
                     <div class="generation-process hidden">
                         <div class="line">
                             <span class="prompt">$</span> 
-                            <span class="command">generating_portfolio --theme modern --style elegant</span>
+                            <span class="command">
+                                generating_portfolio --theme modern --style elegant
+                            </span>
                         </div>
                         <div class="progress-container">
                             <div class="progress-bar"></div>
@@ -118,9 +204,13 @@
         </div>
     </div>
 
-    <!-- Site content (initialement caché) -->
+    <!-- 
+    [2] CONTENU DU SITE (initialement masqué)
+    Affiché après validation du captcha et génération du portfolio.
+    -->
     <div class="site-content hidden" id="siteContent">
-        <!-- Header Terminal Style -->
+        
+        <!-- HEADER DE STYLE "TERMINAL" -->
         <header class="terminal-header">
             <div class="terminal-window">
                 <div class="terminal-bar">
@@ -133,13 +223,16 @@
                 </div>
                 <div class="terminal-content">
                     <div class="terminal-text">
-                        <span class="prompt">$</span> <span class="command">init portfolio</span>
+                        <span class="prompt">$</span> 
+                        <span class="command">init portfolio</span>
                         <div class="response">Initialisation du portfolio...</div>
-                        <span class="prompt">$</span> <span class="command">load welcome.txt</span>
+                        <span class="prompt">$</span> 
+                        <span class="command">load welcome.txt</span>
                         <div class="welcome-text">
                             <span class="typing">Bienvenue dans mon univers numérique !</span>
                         </div>
-                        <span class="prompt">$</span> <span class="command">get user.identity</span>
+                        <span class="prompt">$</span> 
+                        <span class="command">get user.identity</span>
                         <div class="identity-text">
                             <span class="typing-delay-1">Je suis Alex Garnier</span>
                             <span class="typing-delay-2">Spécialiste en IA & DevOps</span>
@@ -150,7 +243,10 @@
             </div>
         </header>
 
-        <!-- Menu Moderne -->
+        <!-- 
+        [3] MENU DE NAVIGATION DE STYLE "MODERNE" 
+        (ou "glass-nav" dans ce cas).
+        -->
         <nav class="glass-nav">
             <div class="nav-container">
                 <ul class="nav-list">
@@ -188,18 +284,32 @@
             </div>
         </nav>
 
-        <!-- Main Content -->
+        <!-- 
+        [4] CONTENU PRINCIPAL (MAIN)
+        Sections : about, experience, skills, projects, contact, etc.
+        -->
         <main>
-            <!-- About Section -->
+            <!-- ABOUT SECTION -->
             <section id="about" class="section">
                 <div class="container">
                     <h2>À propos</h2>
-                    <p>Depuis plus de dix ans, je travaille à l'intersection de l'ingénierie logicielle et de l'intelligence artificielle. Mon objectif est de concevoir des solutions technologiques innovantes, fiables et éthiques pour répondre aux défis de demain. Passionné par l'apprentissage automatique, je développe des systèmes capables d'apprendre et de s'adapter en temps réel.</p>
-                    <p>En parallèle, je suis mentor pour les jeunes talents en technologie et j'écris régulièrement sur les tendances dans le domaine de l'IA et du cloud computing.</p>
+                    <p>
+                        Depuis plus de dix ans, je travaille à l'intersection de 
+                        l'ingénierie logicielle et de l'intelligence artificielle. 
+                        Mon objectif est de concevoir des solutions technologiques 
+                        innovantes, fiables et éthiques pour répondre aux défis de demain. 
+                        Passionné par l'apprentissage automatique, je développe des systèmes 
+                        capables d'apprendre et de s'adapter en temps réel.
+                    </p>
+                    <p>
+                        En parallèle, je suis mentor pour les jeunes talents en technologie 
+                        et j'écris régulièrement sur les tendances dans le domaine de l'IA 
+                        et du cloud computing.
+                    </p>
                 </div>
             </section>
 
-            <!-- Experience Section -->
+            <!-- EXPERIENCE SECTION -->
             <section id="experience" class="section">
                 <div class="container">
                     <h2>Expérience</h2>
@@ -213,7 +323,7 @@
                                 <p>Direction équipe IA, +40% performance</p>
                             </div>
                         </div>
-                        
+
                         <div class="experience-node">
                             <div class="experience-dot"></div>
                             <div class="experience-content">
@@ -223,7 +333,7 @@
                                 <p>Lead Full Stack, -60% coûts</p>
                             </div>
                         </div>
-                        
+
                         <div class="experience-node">
                             <div class="experience-dot"></div>
                             <div class="experience-content">
@@ -233,7 +343,7 @@
                                 <p>99.99% uptime, CI/CD</p>
                             </div>
                         </div>
-                        
+
                         <div class="experience-node">
                             <div class="experience-dot"></div>
                             <div class="experience-content">
@@ -247,27 +357,39 @@
                 </div>
             </section>
 
-            <!-- Stats Section -->
+            <!-- STATS SECTION -->
             <section id="stats" class="section">
                 <div class="container">
                     <div class="stats-grid">
                         <div class="stat-item animate-on-scroll">
-                            <span class="counter" data-value="10">0</span>
+                            <span 
+                                class="counter" 
+                                data-value="10"
+                            >0</span>
                             <p>Années d'Expérience</p>
                             <i class="fas fa-history stat-icon"></i>
                         </div>
                         <div class="stat-item animate-on-scroll">
-                            <span class="counter" data-value="50">0</span>
+                            <span 
+                                class="counter" 
+                                data-value="50"
+                            >0</span>
                             <p>Projets Réalisés</p>
                             <i class="fas fa-project-diagram stat-icon"></i>
                         </div>
                         <div class="stat-item animate-on-scroll">
-                            <span class="counter" data-value="25">0</span>
+                            <span 
+                                class="counter" 
+                                data-value="25"
+                            >0</span>
                             <p>Clients Satisfaits</p>
                             <i class="fas fa-smile-beam stat-icon"></i>
                         </div>
                         <div class="stat-item animate-on-scroll">
-                            <span class="counter" data-value="20">0</span>
+                            <span 
+                                class="counter" 
+                                data-value="20"
+                            >0</span>
                             <p>Technologies Maîtrisées</p>
                             <i class="fas fa-code stat-icon"></i>
                         </div>
@@ -275,166 +397,245 @@
                 </div>
             </section>
 
-            <!-- Skills Section -->
+            <!-- SKILLS SECTION -->
             <section id="skills" class="section">
                 <div class="container">
                     <h2>Compétences</h2>
                     <div class="skills-grid">
-                        <!-- Languages -->
+
+                        <!-- LANGUAGES & FRAMEWORKS -->
                         <div class="skill-category">
                             <h3>Langages & Frameworks</h3>
-                            <div class="skill-item" data-tooltip="Machine Learning, APIs REST, Data Science">
+                            <div 
+                                class="skill-item" 
+                                data-tooltip="Machine Learning, APIs REST, Data Science"
+                            >
                                 <i class="fab fa-python"></i>
                                 <div class="skill-info">
                                     <span class="skill-name">Python</span>
                                     <span class="skill-badge">Expert</span>
                                 </div>
                                 <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 95%"></div>
+                                    <div 
+                                        class="skill-progress" 
+                                        style="width: 95%"
+                                    ></div>
                                 </div>
                             </div>
 
-                            <div class="skill-item" data-tooltip="React, Vue.js, Node.js, TypeScript">
+                            <div 
+                                class="skill-item" 
+                                data-tooltip="React, Vue.js, Node.js, TypeScript"
+                            >
                                 <i class="fab fa-js"></i>
                                 <div class="skill-info">
                                     <span class="skill-name">JavaScript</span>
                                     <span class="skill-badge">Expert</span>
                                 </div>
                                 <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 90%"></div>
+                                    <div 
+                                        class="skill-progress" 
+                                        style="width: 90%"
+                                    ></div>
                                 </div>
                             </div>
 
-                            <div class="skill-item" data-tooltip="Spring Boot, Microservices, JPA">
+                            <div 
+                                class="skill-item" 
+                                data-tooltip="Spring Boot, Microservices, JPA"
+                            >
                                 <i class="fab fa-java"></i>
                                 <div class="skill-info">
                                     <span class="skill-name">Java</span>
                                     <span class="skill-badge">Avancé</span>
                                 </div>
                                 <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 85%"></div>
+                                    <div 
+                                        class="skill-progress" 
+                                        style="width: 85%"
+                                    ></div>
                                 </div>
                             </div>
 
-                            <div class="skill-item" data-tooltip="Laravel, Symfony, API Platform">
+                            <div 
+                                class="skill-item" 
+                                data-tooltip="Laravel, Symfony, API Platform"
+                            >
                                 <i class="fab fa-php"></i>
                                 <div class="skill-info">
                                     <span class="skill-name">PHP</span>
                                     <span class="skill-badge">Intermédiaire</span>
                                 </div>
                                 <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 75%"></div>
+                                    <div 
+                                        class="skill-progress" 
+                                        style="width: 75%"
+                                    ></div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Frontend -->
+                        <!-- FRONTEND & DESIGN -->
                         <div class="skill-category">
                             <h3>Frontend & Design</h3>
-                            <div class="skill-item" data-tooltip="Components, Hooks, Redux, Next.js">
+                            <div 
+                                class="skill-item" 
+                                data-tooltip="Components, Hooks, Redux, Next.js"
+                            >
                                 <i class="fab fa-react"></i>
                                 <div class="skill-info">
                                     <span class="skill-name">React</span>
                                     <span class="skill-badge">Expert</span>
                                 </div>
                                 <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 92%"></div>
+                                    <div 
+                                        class="skill-progress" 
+                                        style="width: 92%"
+                                    ></div>
                                 </div>
                             </div>
 
-                            <div class="skill-item" data-tooltip="Vuex, Composition API, Nuxt.js">
+                            <div 
+                                class="skill-item" 
+                                data-tooltip="Vuex, Composition API, Nuxt.js"
+                            >
                                 <i class="fab fa-vuejs"></i>
                                 <div class="skill-info">
                                     <span class="skill-name">Vue.js</span>
                                     <span class="skill-badge">Avancé</span>
                                 </div>
                                 <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 88%"></div>
+                                    <div 
+                                        class="skill-progress" 
+                                        style="width: 88%"
+                                    ></div>
                                 </div>
                             </div>
 
-                            <div class="skill-item" data-tooltip="Responsive Design, Animations, Sass">
+                            <div 
+                                class="skill-item" 
+                                data-tooltip="Responsive Design, Animations, Sass"
+                            >
                                 <i class="fab fa-css3-alt"></i>
                                 <div class="skill-info">
                                     <span class="skill-name">CSS/SCSS</span>
                                     <span class="skill-badge">Expert</span>
                                 </div>
                                 <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 90%"></div>
+                                    <div 
+                                        class="skill-progress" 
+                                        style="width: 90%"
+                                    ></div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Cloud & DevOps -->
+                        <!-- CLOUD & DEVOPS -->
                         <div class="skill-category">
                             <h3>Cloud & DevOps</h3>
-                            <div class="skill-item" data-tooltip="Lambda, S3, EC2, ECS, CloudFormation">
+                            <div 
+                                class="skill-item" 
+                                data-tooltip="Lambda, S3, EC2, ECS, CloudFormation"
+                            >
                                 <i class="fab fa-aws"></i>
                                 <div class="skill-info">
                                     <span class="skill-name">AWS</span>
                                     <span class="skill-badge">Expert</span>
                                 </div>
                                 <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 90%"></div>
+                                    <div 
+                                        class="skill-progress" 
+                                        style="width: 90%"
+                                    ></div>
                                 </div>
                             </div>
 
-                            <div class="skill-item" data-tooltip="Conteneurisation, Orchestration">
+                            <div 
+                                class="skill-item" 
+                                data-tooltip="Conteneurisation, Orchestration"
+                            >
                                 <i class="fab fa-docker"></i>
                                 <div class="skill-info">
                                     <span class="skill-name">Docker/K8s</span>
                                     <span class="skill-badge">Expert</span>
                                 </div>
                                 <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 88%"></div>
+                                    <div 
+                                        class="skill-progress" 
+                                        style="width: 88%"
+                                    ></div>
                                 </div>
                             </div>
 
-                            <div class="skill-item" data-tooltip="CI/CD, Actions, Pages">
+                            <div 
+                                class="skill-item" 
+                                data-tooltip="CI/CD, Actions, Pages"
+                            >
                                 <i class="fab fa-github"></i>
                                 <div class="skill-info">
                                     <span class="skill-name">GitHub</span>
                                     <span class="skill-badge">Expert</span>
                                 </div>
                                 <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 95%"></div>
+                                    <div 
+                                        class="skill-progress" 
+                                        style="width: 95%"
+                                    ></div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- AI/ML -->
+                        <!-- IA / ML -->
                         <div class="skill-category">
                             <h3>Intelligence Artificielle</h3>
-                            <div class="skill-item" data-tooltip="TensorFlow, PyTorch, Scikit-learn">
+                            <div 
+                                class="skill-item" 
+                                data-tooltip="TensorFlow, PyTorch, Scikit-learn"
+                            >
                                 <i class="fas fa-brain"></i>
                                 <div class="skill-info">
                                     <span class="skill-name">Machine Learning</span>
                                     <span class="skill-badge">Expert</span>
                                 </div>
                                 <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 92%"></div>
+                                    <div 
+                                        class="skill-progress" 
+                                        style="width: 92%"
+                                    ></div>
                                 </div>
                             </div>
 
-                            <div class="skill-item" data-tooltip="BERT, GPT, Transformers">
+                            <div 
+                                class="skill-item" 
+                                data-tooltip="BERT, GPT, Transformers"
+                            >
                                 <i class="fas fa-language"></i>
                                 <div class="skill-info">
                                     <span class="skill-name">NLP</span>
                                     <span class="skill-badge">Avancé</span>
                                 </div>
                                 <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 85%"></div>
+                                    <div 
+                                        class="skill-progress" 
+                                        style="width: 85%"
+                                    ></div>
                                 </div>
                             </div>
 
-                            <div class="skill-item" data-tooltip="CNN, Object Detection, OpenCV">
+                            <div 
+                                class="skill-item" 
+                                data-tooltip="CNN, Object Detection, OpenCV"
+                            >
                                 <i class="fas fa-eye"></i>
                                 <div class="skill-info">
                                     <span class="skill-name">Computer Vision</span>
                                     <span class="skill-badge">Avancé</span>
                                 </div>
                                 <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 80%"></div>
+                                    <div 
+                                        class="skill-progress" 
+                                        style="width: 80%"
+                                    ></div>
                                 </div>
                             </div>
                         </div>
@@ -442,7 +643,7 @@
                 </div>
             </section>
 
-            <!-- Section Formation -->
+            <!-- FORMATION (EDUCATION) SECTION -->
             <section id="education" class="section">
                 <div class="container">
                     <h2>Formation</h2>
@@ -453,7 +654,9 @@
                                 <h3>Doctorat en Intelligence Artificielle</h3>
                                 <p>Université de Paris</p>
                                 <span class="education-badge">Intelligence Artificielle</span>
-                                <p class="education-details">Spécialisation en Deep Learning et Computer Vision</p>
+                                <p class="education-details">
+                                    Spécialisation en Deep Learning et Computer Vision
+                                </p>
                             </div>
                         </div>
 
@@ -463,7 +666,9 @@
                                 <h3>Master en Informatique</h3>
                                 <p>École Polytechnique</p>
                                 <span class="education-badge">Computer Science</span>
-                                <p class="education-details">Major de promotion - Mention Très Bien</p>
+                                <p class="education-details">
+                                    Major de promotion - Mention Très Bien
+                                </p>
                             </div>
                         </div>
 
@@ -473,14 +678,16 @@
                                 <h3>Licence en Mathématiques</h3>
                                 <p>ENS Lyon</p>
                                 <span class="education-badge">Mathématiques</span>
-                                <p class="education-details">Spécialisation en Algèbre et Analyse Numérique</p>
+                                <p class="education-details">
+                                    Spécialisation en Algèbre et Analyse Numérique
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Section Projets -->
+            <!-- PROJETS SECTION -->
             <section id="projects" class="section">
                 <div class="container">
                     <h2>Projets Réalisés</h2>
@@ -492,7 +699,10 @@
                             </div>
                             <div class="project-content">
                                 <h3>HealthPredict AI</h3>
-                                <p>Système de prédiction pour le diagnostic précoce utilisant le Deep Learning</p>
+                                <p>
+                                    Système de prédiction pour le diagnostic précoce 
+                                    utilisant le Deep Learning
+                                </p>
                                 <div class="project-tech">
                                     <span>Python</span>
                                     <span>TensorFlow</span>
@@ -508,7 +718,9 @@
                             </div>
                             <div class="project-content">
                                 <h3>CloudScale Platform</h3>
-                                <p>Plateforme d'auto-scaling pour applications microservices</p>
+                                <p>
+                                    Plateforme d'auto-scaling pour applications microservices
+                                </p>
                                 <div class="project-tech">
                                     <span>Kubernetes</span>
                                     <span>Docker</span>
@@ -524,7 +736,9 @@
                             </div>
                             <div class="project-content">
                                 <h3>SmartBot NLP</h3>
-                                <p>Assistant virtuel multilingue avec compréhension contextuelle</p>
+                                <p>
+                                    Assistant virtuel multilingue avec compréhension contextuelle
+                                </p>
                                 <div class="project-tech">
                                     <span>BERT</span>
                                     <span>PyTorch</span>
@@ -536,22 +750,28 @@
                 </div>
             </section>
 
-            <!-- Testimonials Section -->
+            <!-- TESTIMONIALS (TÉMOIGNAGES) SECTION -->
             <section id="testimonials" class="section">
                 <div class="container">
                     <h2>Témoignages</h2>
                     <blockquote>
-                        <p>"Alex est un véritable visionnaire en intelligence artificielle. Son expertise a transformé notre entreprise."</p>
+                        <p>
+                            "Alex est un véritable visionnaire en intelligence artificielle. 
+                            Son expertise a transformé notre entreprise."
+                        </p>
                         <cite>- CEO, NeuralTech Labs</cite>
                     </blockquote>
                     <blockquote>
-                        <p>"Un partenaire technologique exceptionnel, capable de résoudre les problèmes les plus complexes."</p>
+                        <p>
+                            "Un partenaire technologique exceptionnel, capable de résoudre 
+                            les problèmes les plus complexes."
+                        </p>
                         <cite>- Directeur Technique, CodeGen Solutions</cite>
                     </blockquote>
                 </div>
             </section>
 
-            <!-- Blog Section modernisée -->
+            <!-- BLOG SECTION MODERNISÉE -->
             <section id="blog" class="section">
                 <div class="container">
                     <h2>Blog</h2>
@@ -566,13 +786,21 @@
                                     <span>15 Mars 2024</span>
                                 </div>
                                 <h3>Les 5 Tendances de l'IA en 2024</h3>
-                                <p>Découvrez les innovations majeures qui façonnent le futur de l'intelligence artificielle...</p>
-                                <a href="#" class="read-more">Lire l'article <i class="fas fa-arrow-right"></i></a>
+                                <p>
+                                    Découvrez les innovations majeures qui façonnent 
+                                    le futur de l'intelligence artificielle...
+                                </p>
+                                <a href="#" class="read-more">
+                                    Lire l'article <i class="fas fa-arrow-right"></i>
+                                </a>
                             </div>
                         </article>
 
                         <article class="blog-card">
-                            <div class="blog-image" style="background: linear-gradient(45deg, #e74c3c, #f39c12);">
+                            <div 
+                                class="blog-image" 
+                                style="background: linear-gradient(45deg, #e74c3c, #f39c12);"
+                            >
                                 <div class="blog-category">DevOps</div>
                             </div>
                             <div class="blog-content">
@@ -581,13 +809,21 @@
                                     <span>10 Mars 2024</span>
                                 </div>
                                 <h3>DevOps : Automatiser pour Innover</h3>
-                                <p>Comment l'automatisation transforme le développement moderne et accélère l'innovation...</p>
-                                <a href="#" class="read-more">Lire l'article <i class="fas fa-arrow-right"></i></a>
+                                <p>
+                                    Comment l'automatisation transforme le développement 
+                                    moderne et accélère l'innovation...
+                                </p>
+                                <a href="#" class="read-more">
+                                    Lire l'article <i class="fas fa-arrow-right"></i>
+                                </a>
                             </div>
                         </article>
 
                         <article class="blog-card">
-                            <div class="blog-image" style="background: linear-gradient(45deg, #9b59b6, #3498db);">
+                            <div 
+                                class="blog-image" 
+                                style="background: linear-gradient(45deg, #9b59b6, #3498db);"
+                            >
                                 <div class="blog-category">Cloud</div>
                             </div>
                             <div class="blog-content">
@@ -596,15 +832,20 @@
                                     <span>5 Mars 2024</span>
                                 </div>
                                 <h3>Cloud Native : Le Futur du Développement</h3>
-                                <p>Les meilleures pratiques pour développer des applications cloud natives performantes...</p>
-                                <a href="#" class="read-more">Lire l'article <i class="fas fa-arrow-right"></i></a>
+                                <p>
+                                    Les meilleures pratiques pour développer des applications 
+                                    cloud natives performantes...
+                                </p>
+                                <a href="#" class="read-more">
+                                    Lire l'article <i class="fas fa-arrow-right"></i>
+                                </a>
                             </div>
                         </article>
                     </div>
                 </div>
             </section>
 
-            <!-- Contact Section modernisée -->
+            <!-- CONTACT SECTION MODERNISÉE -->
             <section id="contact" class="section">
                 <div class="container">
                     <h2>Contact</h2>
@@ -625,9 +866,15 @@
                                 </div>
                             </div>
                             <div class="contact-social">
-                                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="social-link">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                                <a href="#" class="social-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="social-link">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -635,14 +882,19 @@
             </section>
         </main>
 
-        <!-- Footer -->
+        <!-- 
+        [5] FOOTER 
+        -->
         <footer class="modern-footer">
             <div class="container">
                 <p>Réalisé par Dimitri Rey - BTS SIO</p>
             </div>
         </footer>
 
-        <!-- Chat widget -->
+        <!-- 
+        [6] CHAT WIDGET
+        Bulle de chat et zone de discussion pour l’assistant virtuel.
+        -->
         <div class="chat-widget">
             <div class="chat-bubble">
                 <i class="fas fa-comments"></i>
@@ -650,45 +902,76 @@
             <div class="chat-box">
                 <div class="chat-header">
                     <h3>Discussion</h3>
-                    <button class="close-chat"><i class="fas fa-times"></i></button>
+                    <button class="close-chat">
+                        <i class="fas fa-times"></i>
+                    </button>
                 </div>
                 <div class="chat-messages">
                     <!-- Les messages s'afficheront ici -->
                 </div>
                 <div class="chat-input">
-                    <input type="text" placeholder="Posez votre question...">
-                    <button class="send-message"><i class="fas fa-paper-plane"></i></button>
+                    <input 
+                        type="text" 
+                        placeholder="Posez votre question..."
+                    >
+                    <button class="send-message">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
                 </div>
             </div>
         </div>
 
-        <!-- JavaScript : script minifié en defer -->
-        <script src="assets/js/script.min.js" defer></script>
+        <!-- 
+        [7] SCRIPT JS MINIFIÉ
+        Chargé en defer pour ne pas bloquer le rendu.
+        -->
+        <script 
+            src="assets/js/script.min.js" 
+            defer
+        ></script>
 
-        <!-- Ajouter juste avant la fermeture du body -->
+        <!-- 
+        [8] BOUTON "ME CONTACTER" FLOTTANT
+        Permet un accès rapide à la section #contact.
+        -->
         <a href="#contact" class="contact-floating">
             <i class="fas fa-envelope"></i>
             <span>Me contacter</span>
         </a>
 
-        <div class="end-page-popup" id="endPagePopup">
+        <!-- 
+        [9] POPUP DE FIN DE PAGE 
+        S’affiche lorsque l’utilisateur arrive en bas de page.
+        -->
+        <div 
+            class="end-page-popup" 
+            id="endPagePopup"
+        >
             <p>Vous voulez plus d'information ? Je vous propose de les poser à mon IA</p>
-            <button onclick="openChatBot()" class="btn-primary">Discuter avec l'IA</button>
+            <button 
+                onclick="openChatBot()" 
+                class="btn-primary"
+            >
+                Discuter avec l'IA
+            </button>
         </div>
 
+        <!-- 
+        [10] SCRIPT INLINE (POUR LE POPUP ET LE CHATBOT)
+        -->
         <script>
-        document.addEventListener('scroll', function() {
-            // Vérifie si l'utilisateur est proche du bas de la page
-            if ((window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight - 100) {
-                document.getElementById('endPagePopup').style.display = 'block';
-            }
-        });
+            document.addEventListener('scroll', function() {
+                // Vérifie si l'utilisateur est proche du bas de la page
+                if ((window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight - 100) {
+                    document.getElementById('endPagePopup').style.display = 'block';
+                }
+            });
 
-        function openChatBot() {
-            // Ouvre le chat bot et ferme le popup
-            document.querySelector('.chat-box').classList.add('active');
-            document.getElementById('endPagePopup').style.display = 'none';
-        }
+            function openChatBot() {
+                // Ouvre la fenêtre de chat et ferme le popup
+                document.querySelector('.chat-box').classList.add('active');
+                document.getElementById('endPagePopup').style.display = 'none';
+            }
         </script>
     </div>
 </body>
