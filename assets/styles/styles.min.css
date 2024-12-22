@@ -460,3 +460,201 @@
         padding: 1.2rem;
     }
 }
+
+/* Media Queries pour les appareils mobiles */
+@media (max-width: 768px) {
+    /* Ajustement de la grille de contact */
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    /* Ajustement des éléments de contact */
+    .contact-item {
+        padding: 1.2rem;
+        gap: 1rem;
+    }
+
+    .contact-item i {
+        font-size: 1.5rem;
+        padding: 0.8rem;
+    }
+
+    /* Ajustement du formulaire */
+    .contact-form {
+        padding: 1.5rem;
+    }
+
+    .form-group {
+        margin-bottom: 1rem;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 0.8rem;
+        font-size: 16px; /* Évite le zoom automatique sur iOS */
+    }
+
+    /* Ajustement des réseaux sociaux */
+    .social-links h3 {
+        font-size: 1.5rem;
+        padding: 8px 16px;
+    }
+
+    .social-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+
+    .social-item {
+        padding: 1rem;
+    }
+
+    .social-item i {
+        font-size: 1.8rem;
+    }
+
+    /* Ajustement du chat */
+    .chat-widget {
+        bottom: 10px;
+        right: 10px;
+        width: calc(100% - 20px);
+        max-width: none;
+    }
+
+    .chat-box {
+        width: 100%;
+        height: 80vh;
+        border-radius: 12px;
+    }
+
+    .chat-bubble {
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+    }
+
+    /* Ajustement du popup de fin de page */
+    .end-page-popup {
+        width: calc(100% - 40px);
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 1rem;
+        margin: 0 20px;
+    }
+}
+
+/* Ajustements spécifiques pour les très petits écrans */
+@media (max-width: 480px) {
+    /* Ajustement des titres */
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    /* Ajustement de la grille sociale */
+    .social-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .social-item {
+        padding: 1.2rem;
+    }
+
+    /* Ajustement des marges et paddings */
+    .section {
+        padding: 2rem 1rem;
+    }
+
+    .container {
+        padding: 0 1rem;
+    }
+
+    /* Ajustement des éléments de contact */
+    .contact-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contact-details {
+        text-align: center;
+    }
+
+    /* Optimisation du formulaire */
+    .form-group label {
+        font-size: 0.9rem;
+    }
+
+    .submit-btn {
+        padding: 0.8rem;
+    }
+
+    /* Ajustement du chat pour petits écrans */
+    .chat-box {
+        height: 100vh;
+        border-radius: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    .chat-header {
+        border-radius: 0;
+    }
+}
+
+/* Ajustements pour l'orientation paysage sur mobile */
+@media (max-height: 600px) and (orientation: landscape) {
+    .chat-box {
+        height: 100vh;
+    }
+
+    .chat-messages {
+        max-height: 50vh;
+    }
+
+    .contact-grid {
+        gap: 1rem;
+    }
+
+    .social-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Ajustements pour éviter les problèmes de débordement */
+@media (hover: none) {
+    .social-item:hover {
+        transform: none;
+    }
+
+    .contact-item:hover {
+        transform: none;
+    }
+}
+
+/* Optimisations pour les appareils à écran tactile */
+@media (pointer: coarse) {
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 12px;  /* Plus grand pour une meilleure zone de toucher */
+    }
+
+    .submit-btn {
+        min-height: 44px;  /* Hauteur minimale recommandée pour les éléments tactiles */
+    }
+
+    .social-item {
+        min-height: 44px;
+    }
+}
