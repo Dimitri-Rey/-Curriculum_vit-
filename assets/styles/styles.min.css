@@ -626,35 +626,72 @@
     }
 }
 
-/* Styles spécifiques pour les écrans de petite taille */
+/* Styles du hamburger */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+}
+
+.hamburger-line {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: #fff;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+/* État actif du hamburger */
+.hamburger.active .hamburger-line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Media queries pour le mobile */
 @media (max-width: 768px) {
-    body {
-        font-size: 14px; /* Ajuster la taille de la police */
+    .hamburger {
+        display: block;
     }
 
-    header {
-        padding: 1rem 0; /* Réduire le padding */
+    .nav-container {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 250px;
+        height: 100vh;
+        background: rgba(44, 62, 80, 0.98);
+        backdrop-filter: blur(10px);
+        padding: 4rem 1rem;
+        transition: right 0.3s ease;
+    }
+
+    .nav-container.active {
+        right: 0;
     }
 
     .nav-list {
-        flex-direction: column; /* Afficher les éléments de navigation en colonne */
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
     }
 
-    .section {
-        padding: 1rem; /* Réduire le padding des sections */
+    .nav-link {
+        width: 100%;
+        padding: 0.8rem 1rem;
     }
-
-    .contact-grid, .skills-grid, .projects-grid, .blog-grid {
-        grid-template-columns: 1fr; /* Afficher les éléments en une seule colonne */
-    }
-
-    .terminal-window, .terminal-content {
-        width: 100%; /* Assurer que les éléments prennent toute la largeur */
-    }
-
-    .chat-box {
-        width: 100%; /* Assurer que la boîte de chat est responsive */
-    }
-
-    /* Autres ajustements spécifiques pour le mobile */
 }
