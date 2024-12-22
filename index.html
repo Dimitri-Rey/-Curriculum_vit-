@@ -72,495 +72,570 @@
     <link rel="icon" href="assets/images/favicon.png" type="image/png">
 </head>
 <body>
-    <!-- Header avec message de bienvenue et effet hacker -->
-    <header>
-        <div class="container">
-            <div class="welcome-text">
-                <h1 class="hacker-text" data-text="Bienvenue sur le Portfolio d'Alex Garnier">Bienvenue sur le Portfolio d'Alex Garnier</h1>
-                <p class="subtitle">Ingénieur IA, Cloud, DevOps & Innovations Géniales</p>
-                <p class="tagline">"Transformer des idées complexes en solutions élégantes"</p>
-                <div class="typed-text">
-                    <span id="typed"></span>
-                    <span class="cursor">|</span>
+    <!-- Terminal Loading Screen -->
+    <div class="terminal-loader" id="terminalLoader">
+        <div class="terminal-window">
+            <div class="terminal-bar">
+                <div class="terminal-buttons">
+                    <span class="terminal-button close"></span>
+                    <span class="terminal-button minimize"></span>
+                    <span class="terminal-button zoom"></span>
                 </div>
+                <div class="terminal-title">portfolio_generator.exe</div>
             </div>
-        </div>
-        <div class="particles"></div>
-    </header>
-
-    <!-- Navigation moderne -->
-    <nav class="modern-nav">
-        <div class="container">
-            <ul class="nav-list">
-                <li><a href="#about" class="nav-link"><i class="fas fa-user"></i><span>À propos</span></a></li>
-                <li><a href="#experience" class="nav-link"><i class="fas fa-briefcase"></i><span>Expérience</span></a></li>
-                <li><a href="#skills" class="nav-link"><i class="fas fa-code"></i><span>Compétences</span></a></li>
-                <li><a href="#projects" class="nav-link"><i class="fas fa-project-diagram"></i><span>Projets</span></a></li>
-                <li><a href="#education" class="nav-link"><i class="fas fa-graduation-cap"></i><span>Formation</span></a></li>
-                <li><a href="#blog" class="nav-link"><i class="fas fa-blog"></i><span>Blog</span></a></li>
-                <li><a href="#contact" class="nav-link"><i class="fas fa-envelope"></i><span>Contact</span></a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- Main Content -->
-    <main>
-        <!-- About Section -->
-        <section id="about" class="section">
-            <div class="container">
-                <h2>À propos</h2>
-                <p>Depuis plus de dix ans, je travaille à l'intersection de l'ingénierie logicielle et de l'intelligence artificielle. Mon objectif est de concevoir des solutions technologiques innovantes, fiables et éthiques pour répondre aux défis de demain. Passionné par l'apprentissage automatique, je développe des systèmes capables d'apprendre et de s'adapter en temps réel.</p>
-                <p>En parallèle, je suis mentor pour les jeunes talents en technologie et j'écris régulièrement sur les tendances dans le domaine de l'IA et du cloud computing.</p>
-            </div>
-        </section>
-
-        <!-- Experience Section -->
-        <section id="experience" class="section">
-            <div class="container">
-                <h2>Expérience</h2>
-                <div class="experience-path">
-                    <div class="experience-node">
-                        <div class="experience-dot"></div>
-                        <div class="experience-content">
-                            <div class="experience-date">2021 - Présent</div>
-                            <h3>Lead AI Engineer</h3>
-                            <p><strong>NeuralTech Labs</strong></p>
-                            <p>Direction équipe IA, +40% performance</p>
-                        </div>
+            <div class="terminal-content">
+                <div class="terminal-text">
+                    <div class="line">
+                        <span class="prompt">$</span> 
+                        <span class="command">initialize portfolio_generator</span>
                     </div>
-                    
-                    <div class="experience-node">
-                        <div class="experience-dot"></div>
-                        <div class="experience-content">
-                            <div class="experience-date">2018 - 2021</div>
-                            <h3>Senior Dev</h3>
-                            <p><strong>TechForward</strong></p>
-                            <p>Lead Full Stack, -60% coûts</p>
-                        </div>
+                    <div class="line">Initialisation du générateur de portfolio...</div>
+                    <div class="line">
+                        <span class="prompt">$</span> 
+                        <span class="security">Veuillez compléter le captcha de sécurité :</span>
                     </div>
-                    
-                    <div class="experience-node">
-                        <div class="experience-dot"></div>
-                        <div class="experience-content">
-                            <div class="experience-date">2015 - 2018</div>
-                            <h3>DevOps</h3>
-                            <p><strong>CloudScale</strong></p>
-                            <p>99.99% uptime, CI/CD</p>
-                        </div>
+                    <div class="captcha-container">
+                        <div id="captchaText"></div>
+                        <input type="text" id="captchaInput" placeholder="Entrez le captcha">
+                        <button id="validateCaptcha">Valider</button>
                     </div>
-                    
-                    <div class="experience-node">
-                        <div class="experience-dot"></div>
-                        <div class="experience-content">
-                            <div class="experience-date">2014</div>
-                            <h3>AI Research</h3>
-                            <p><strong>Stanford</strong></p>
-                            <p>Deep Learning, Publication</p>
+                    <div class="generation-process hidden">
+                        <div class="line">
+                            <span class="prompt">$</span> 
+                            <span class="command">generating_portfolio --theme modern --style elegant</span>
                         </div>
+                        <div class="progress-container">
+                            <div class="progress-bar"></div>
+                            <div class="progress-text">0%</div>
+                        </div>
+                        <div class="generation-steps"></div>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <!-- Stats Section -->
-        <section id="stats" class="section">
-            <div class="container">
-                <div class="stats-grid">
-                    <div class="stat-item animate-on-scroll">
-                        <span class="counter" data-value="10">0</span>
-                        <p>Années d'Expérience</p>
-                        <i class="fas fa-history stat-icon"></i>
-                    </div>
-                    <div class="stat-item animate-on-scroll">
-                        <span class="counter" data-value="50">0</span>
-                        <p>Projets Réalisés</p>
-                        <i class="fas fa-project-diagram stat-icon"></i>
-                    </div>
-                    <div class="stat-item animate-on-scroll">
-                        <span class="counter" data-value="25">0</span>
-                        <p>Clients Satisfaits</p>
-                        <i class="fas fa-smile-beam stat-icon"></i>
-                    </div>
-                    <div class="stat-item animate-on-scroll">
-                        <span class="counter" data-value="20">0</span>
-                        <p>Technologies Maîtrisées</p>
-                        <i class="fas fa-code stat-icon"></i>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills" class="section">
-            <div class="container">
-                <h2>Compétences</h2>
-                <div class="skills-grid">
-                    <!-- Languages -->
-                    <div class="skill-category">
-                        <h3>Langages & Frameworks</h3>
-                        <div class="skill-item" data-tooltip="Machine Learning, APIs REST, Data Science">
-                            <i class="fab fa-python"></i>
-                            <div class="skill-info">
-                                <span class="skill-name">Python</span>
-                                <span class="skill-badge">Expert</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 95%"></div>
-                            </div>
-                        </div>
-
-                        <div class="skill-item" data-tooltip="React, Vue.js, Node.js, TypeScript">
-                            <i class="fab fa-js"></i>
-                            <div class="skill-info">
-                                <span class="skill-name">JavaScript</span>
-                                <span class="skill-badge">Expert</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
-                            </div>
-                        </div>
-
-                        <div class="skill-item" data-tooltip="Spring Boot, Microservices, JPA">
-                            <i class="fab fa-java"></i>
-                            <div class="skill-info">
-                                <span class="skill-name">Java</span>
-                                <span class="skill-badge">Avancé</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%"></div>
-                            </div>
-                        </div>
-
-                        <div class="skill-item" data-tooltip="Laravel, Symfony, API Platform">
-                            <i class="fab fa-php"></i>
-                            <div class="skill-info">
-                                <span class="skill-name">PHP</span>
-                                <span class="skill-badge">Intermédiaire</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 75%"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Frontend -->
-                    <div class="skill-category">
-                        <h3>Frontend & Design</h3>
-                        <div class="skill-item" data-tooltip="Components, Hooks, Redux, Next.js">
-                            <i class="fab fa-react"></i>
-                            <div class="skill-info">
-                                <span class="skill-name">React</span>
-                                <span class="skill-badge">Expert</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 92%"></div>
-                            </div>
-                        </div>
-
-                        <div class="skill-item" data-tooltip="Vuex, Composition API, Nuxt.js">
-                            <i class="fab fa-vuejs"></i>
-                            <div class="skill-info">
-                                <span class="skill-name">Vue.js</span>
-                                <span class="skill-badge">Avancé</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 88%"></div>
-                            </div>
-                        </div>
-
-                        <div class="skill-item" data-tooltip="Responsive Design, Animations, Sass">
-                            <i class="fab fa-css3-alt"></i>
-                            <div class="skill-info">
-                                <span class="skill-name">CSS/SCSS</span>
-                                <span class="skill-badge">Expert</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Cloud & DevOps -->
-                    <div class="skill-category">
-                        <h3>Cloud & DevOps</h3>
-                        <div class="skill-item" data-tooltip="Lambda, S3, EC2, ECS, CloudFormation">
-                            <i class="fab fa-aws"></i>
-                            <div class="skill-info">
-                                <span class="skill-name">AWS</span>
-                                <span class="skill-badge">Expert</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
-                            </div>
-                        </div>
-
-                        <div class="skill-item" data-tooltip="Conteneurisation, Orchestration">
-                            <i class="fab fa-docker"></i>
-                            <div class="skill-info">
-                                <span class="skill-name">Docker/K8s</span>
-                                <span class="skill-badge">Expert</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 88%"></div>
-                            </div>
-                        </div>
-
-                        <div class="skill-item" data-tooltip="CI/CD, Actions, Pages">
-                            <i class="fab fa-github"></i>
-                            <div class="skill-info">
-                                <span class="skill-name">GitHub</span>
-                                <span class="skill-badge">Expert</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 95%"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- AI/ML -->
-                    <div class="skill-category">
-                        <h3>Intelligence Artificielle</h3>
-                        <div class="skill-item" data-tooltip="TensorFlow, PyTorch, Scikit-learn">
-                            <i class="fas fa-brain"></i>
-                            <div class="skill-info">
-                                <span class="skill-name">Machine Learning</span>
-                                <span class="skill-badge">Expert</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 92%"></div>
-                            </div>
-                        </div>
-
-                        <div class="skill-item" data-tooltip="BERT, GPT, Transformers">
-                            <i class="fas fa-language"></i>
-                            <div class="skill-info">
-                                <span class="skill-name">NLP</span>
-                                <span class="skill-badge">Avancé</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%"></div>
-                            </div>
-                        </div>
-
-                        <div class="skill-item" data-tooltip="CNN, Object Detection, OpenCV">
-                            <i class="fas fa-eye"></i>
-                            <div class="skill-info">
-                                <span class="skill-name">Computer Vision</span>
-                                <span class="skill-badge">Avancé</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 80%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section Formation -->
-        <section id="education" class="section">
-            <div class="container">
-                <h2>Formation</h2>
-                <div class="education-timeline">
-                    <div class="education-card">
-                        <div class="education-year">2020</div>
-                        <div class="education-content">
-                            <h3>Doctorat en Intelligence Artificielle</h3>
-                            <p>Université de Paris</p>
-                            <span class="education-badge">Intelligence Artificielle</span>
-                            <p class="education-details">Spécialisation en Deep Learning et Computer Vision</p>
-                        </div>
-                    </div>
-
-                    <div class="education-card">
-                        <div class="education-year">2017</div>
-                        <div class="education-content">
-                            <h3>Master en Informatique</h3>
-                            <p>École Polytechnique</p>
-                            <span class="education-badge">Computer Science</span>
-                            <p class="education-details">Major de promotion - Mention Très Bien</p>
-                        </div>
-                    </div>
-
-                    <div class="education-card">
-                        <div class="education-year">2015</div>
-                        <div class="education-content">
-                            <h3>Licence en Mathématiques</h3>
-                            <p>ENS Lyon</p>
-                            <span class="education-badge">Mathématiques</span>
-                            <p class="education-details">Spécialisation en Algèbre et Analyse Numérique</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section Projets -->
-        <section id="projects" class="section">
-            <div class="container">
-                <h2>Projets Réalisés</h2>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <div class="project-header">
-                            <i class="fas fa-brain project-icon"></i>
-                            <span class="project-badge">IA & Santé</span>
-                        </div>
-                        <div class="project-content">
-                            <h3>HealthPredict AI</h3>
-                            <p>Système de prédiction pour le diagnostic précoce utilisant le Deep Learning</p>
-                            <div class="project-tech">
-                                <span>Python</span>
-                                <span>TensorFlow</span>
-                                <span>AWS</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="project-header">
-                            <i class="fas fa-cloud project-icon"></i>
-                            <span class="project-badge">Cloud & DevOps</span>
-                        </div>
-                        <div class="project-content">
-                            <h3>CloudScale Platform</h3>
-                            <p>Plateforme d'auto-scaling pour applications microservices</p>
-                            <div class="project-tech">
-                                <span>Kubernetes</span>
-                                <span>Docker</span>
-                                <span>Go</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="project-header">
-                            <i class="fas fa-robot project-icon"></i>
-                            <span class="project-badge">NLP</span>
-                        </div>
-                        <div class="project-content">
-                            <h3>SmartBot NLP</h3>
-                            <p>Assistant virtuel multilingue avec compréhension contextuelle</p>
-                            <div class="project-tech">
-                                <span>BERT</span>
-                                <span>PyTorch</span>
-                                <span>FastAPI</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Testimonials Section -->
-        <section id="testimonials" class="section">
-            <div class="container">
-                <h2>Témoignages</h2>
-                <blockquote>
-                    <p>"Alex est un véritable visionnaire en intelligence artificielle. Son expertise a transformé notre entreprise."</p>
-                    <cite>- CEO, NeuralTech Labs</cite>
-                </blockquote>
-                <blockquote>
-                    <p>"Un partenaire technologique exceptionnel, capable de résoudre les problèmes les plus complexes."</p>
-                    <cite>- Directeur Technique, CodeGen Solutions</cite>
-                </blockquote>
-            </div>
-        </section>
-
-        <!-- Blog Section modernisée -->
-        <section id="blog" class="section">
-            <div class="container">
-                <h2>Blog</h2>
-                <div class="blog-grid">
-                    <article class="blog-card">
-                        <div class="blog-image">
-                            <div class="blog-category">IA</div>
-                        </div>
-                        <div class="blog-content">
-                            <h3>Les 5 Tendances de l'IA en 2024</h3>
-                            <p>Un aperçu des avancées dans l'intelligence artificielle...</p>
-                            <a href="#" class="read-more">Lire l'article <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-                    <!-- Répéter pour autres articles -->
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section modernisée -->
-        <section id="contact" class="section">
-            <div class="container">
-                <h2>Contact</h2>
-                <div class="contact-grid">
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <div class="contact-details">
-                                <h3>Téléphone</h3>
-                                <p>07 89 45 67 12</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <div class="contact-details">
-                                <h3>Email</h3>
-                                <p>alex.garnier@techpro.com</p>
-                            </div>
-                        </div>
-                        <div class="contact-social">
-                            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Alex Garnier. Tous droits réservés.</p>
-        </div>
-    </footer>
-
-    <!-- Chat widget -->
-    <div class="chat-widget">
-        <div class="chat-bubble">
-            <i class="fas fa-comments"></i>
-        </div>
-        <div class="chat-box">
-            <div class="chat-header">
-                <h3>Discussion</h3>
-                <button class="close-chat"><i class="fas fa-times"></i></button>
-            </div>
-            <div class="chat-messages">
-                <!-- Les messages s'afficheront ici -->
-            </div>
-            <div class="chat-input">
-                <input type="text" placeholder="Posez votre question...">
-                <button class="send-message"><i class="fas fa-paper-plane"></i></button>
             </div>
         </div>
     </div>
 
-    <!-- JavaScript : script minifié en defer -->
-    <script src="assets/js/script.min.js" defer></script>
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-    <!-- Ajouter la notification du chat IA -->
-    <div class="chat-notification" id="chatNotification">
-        <div class="notification-content">
-            <i class="fas fa-robot"></i>
-            <div class="notification-text">
-                <h4>Assistant IA disponible !</h4>
-                <p>Posez-moi vos questions sur Alex 👋</p>
+    <!-- Site content (initialement caché) -->
+    <div class="site-content hidden" id="siteContent">
+        <!-- Header Terminal Style -->
+        <header class="terminal-header">
+            <div class="terminal-window">
+                <div class="terminal-bar">
+                    <div class="terminal-buttons">
+                        <span class="terminal-button close"></span>
+                        <span class="terminal-button minimize"></span>
+                        <span class="terminal-button zoom"></span>
+                    </div>
+                    <div class="terminal-title">portfolio.exe</div>
+                </div>
+                <div class="terminal-content">
+                    <div class="terminal-text">
+                        <span class="prompt">$</span> <span class="command">init portfolio</span>
+                        <div class="response">Initialisation du portfolio...</div>
+                        <span class="prompt">$</span> <span class="command">load welcome.txt</span>
+                        <div class="welcome-text">
+                            <span class="typing">Bienvenue dans mon univers numérique !</span>
+                        </div>
+                        <span class="prompt">$</span> <span class="command">get user.identity</span>
+                        <div class="identity-text">
+                            <span class="typing-delay-1">Je suis Alex Garnier</span>
+                            <span class="typing-delay-2">Spécialiste en IA & DevOps</span>
+                        </div>
+                        <span class="cursor">_</span>
+                    </div>
+                </div>
             </div>
-            <button class="notification-close" onclick="dismissNotification()">
-                <i class="fas fa-times"></i>
-            </button>
+        </header>
+
+        <!-- Menu Moderne -->
+        <nav class="glass-nav">
+            <div class="nav-container">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">
+                            <i class="fas fa-user"></i>
+                            <span>À propos</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#experience" class="nav-link">
+                            <i class="fas fa-briefcase"></i>
+                            <span>Expérience</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#skills" class="nav-link">
+                            <i class="fas fa-code"></i>
+                            <span>Compétences</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#projects" class="nav-link">
+                            <i class="fas fa-project-diagram"></i>
+                            <span>Projets</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">
+                            <i class="fas fa-envelope"></i>
+                            <span>Contact</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main>
+            <!-- About Section -->
+            <section id="about" class="section">
+                <div class="container">
+                    <h2>À propos</h2>
+                    <p>Depuis plus de dix ans, je travaille à l'intersection de l'ingénierie logicielle et de l'intelligence artificielle. Mon objectif est de concevoir des solutions technologiques innovantes, fiables et éthiques pour répondre aux défis de demain. Passionné par l'apprentissage automatique, je développe des systèmes capables d'apprendre et de s'adapter en temps réel.</p>
+                    <p>En parallèle, je suis mentor pour les jeunes talents en technologie et j'écris régulièrement sur les tendances dans le domaine de l'IA et du cloud computing.</p>
+                </div>
+            </section>
+
+            <!-- Experience Section -->
+            <section id="experience" class="section">
+                <div class="container">
+                    <h2>Expérience</h2>
+                    <div class="experience-path">
+                        <div class="experience-node">
+                            <div class="experience-dot"></div>
+                            <div class="experience-content">
+                                <div class="experience-date">2021 - Présent</div>
+                                <h3>Lead AI Engineer</h3>
+                                <p><strong>NeuralTech Labs</strong></p>
+                                <p>Direction équipe IA, +40% performance</p>
+                            </div>
+                        </div>
+                        
+                        <div class="experience-node">
+                            <div class="experience-dot"></div>
+                            <div class="experience-content">
+                                <div class="experience-date">2018 - 2021</div>
+                                <h3>Senior Dev</h3>
+                                <p><strong>TechForward</strong></p>
+                                <p>Lead Full Stack, -60% coûts</p>
+                            </div>
+                        </div>
+                        
+                        <div class="experience-node">
+                            <div class="experience-dot"></div>
+                            <div class="experience-content">
+                                <div class="experience-date">2015 - 2018</div>
+                                <h3>DevOps</h3>
+                                <p><strong>CloudScale</strong></p>
+                                <p>99.99% uptime, CI/CD</p>
+                            </div>
+                        </div>
+                        
+                        <div class="experience-node">
+                            <div class="experience-dot"></div>
+                            <div class="experience-content">
+                                <div class="experience-date">2014</div>
+                                <h3>AI Research</h3>
+                                <p><strong>Stanford</strong></p>
+                                <p>Deep Learning, Publication</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Stats Section -->
+            <section id="stats" class="section">
+                <div class="container">
+                    <div class="stats-grid">
+                        <div class="stat-item animate-on-scroll">
+                            <span class="counter" data-value="10">0</span>
+                            <p>Années d'Expérience</p>
+                            <i class="fas fa-history stat-icon"></i>
+                        </div>
+                        <div class="stat-item animate-on-scroll">
+                            <span class="counter" data-value="50">0</span>
+                            <p>Projets Réalisés</p>
+                            <i class="fas fa-project-diagram stat-icon"></i>
+                        </div>
+                        <div class="stat-item animate-on-scroll">
+                            <span class="counter" data-value="25">0</span>
+                            <p>Clients Satisfaits</p>
+                            <i class="fas fa-smile-beam stat-icon"></i>
+                        </div>
+                        <div class="stat-item animate-on-scroll">
+                            <span class="counter" data-value="20">0</span>
+                            <p>Technologies Maîtrisées</p>
+                            <i class="fas fa-code stat-icon"></i>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section id="skills" class="section">
+                <div class="container">
+                    <h2>Compétences</h2>
+                    <div class="skills-grid">
+                        <!-- Languages -->
+                        <div class="skill-category">
+                            <h3>Langages & Frameworks</h3>
+                            <div class="skill-item" data-tooltip="Machine Learning, APIs REST, Data Science">
+                                <i class="fab fa-python"></i>
+                                <div class="skill-info">
+                                    <span class="skill-name">Python</span>
+                                    <span class="skill-badge">Expert</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 95%"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill-item" data-tooltip="React, Vue.js, Node.js, TypeScript">
+                                <i class="fab fa-js"></i>
+                                <div class="skill-info">
+                                    <span class="skill-name">JavaScript</span>
+                                    <span class="skill-badge">Expert</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 90%"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill-item" data-tooltip="Spring Boot, Microservices, JPA">
+                                <i class="fab fa-java"></i>
+                                <div class="skill-info">
+                                    <span class="skill-name">Java</span>
+                                    <span class="skill-badge">Avancé</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill-item" data-tooltip="Laravel, Symfony, API Platform">
+                                <i class="fab fa-php"></i>
+                                <div class="skill-info">
+                                    <span class="skill-name">PHP</span>
+                                    <span class="skill-badge">Intermédiaire</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 75%"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Frontend -->
+                        <div class="skill-category">
+                            <h3>Frontend & Design</h3>
+                            <div class="skill-item" data-tooltip="Components, Hooks, Redux, Next.js">
+                                <i class="fab fa-react"></i>
+                                <div class="skill-info">
+                                    <span class="skill-name">React</span>
+                                    <span class="skill-badge">Expert</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 92%"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill-item" data-tooltip="Vuex, Composition API, Nuxt.js">
+                                <i class="fab fa-vuejs"></i>
+                                <div class="skill-info">
+                                    <span class="skill-name">Vue.js</span>
+                                    <span class="skill-badge">Avancé</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 88%"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill-item" data-tooltip="Responsive Design, Animations, Sass">
+                                <i class="fab fa-css3-alt"></i>
+                                <div class="skill-info">
+                                    <span class="skill-name">CSS/SCSS</span>
+                                    <span class="skill-badge">Expert</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 90%"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Cloud & DevOps -->
+                        <div class="skill-category">
+                            <h3>Cloud & DevOps</h3>
+                            <div class="skill-item" data-tooltip="Lambda, S3, EC2, ECS, CloudFormation">
+                                <i class="fab fa-aws"></i>
+                                <div class="skill-info">
+                                    <span class="skill-name">AWS</span>
+                                    <span class="skill-badge">Expert</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 90%"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill-item" data-tooltip="Conteneurisation, Orchestration">
+                                <i class="fab fa-docker"></i>
+                                <div class="skill-info">
+                                    <span class="skill-name">Docker/K8s</span>
+                                    <span class="skill-badge">Expert</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 88%"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill-item" data-tooltip="CI/CD, Actions, Pages">
+                                <i class="fab fa-github"></i>
+                                <div class="skill-info">
+                                    <span class="skill-name">GitHub</span>
+                                    <span class="skill-badge">Expert</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 95%"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- AI/ML -->
+                        <div class="skill-category">
+                            <h3>Intelligence Artificielle</h3>
+                            <div class="skill-item" data-tooltip="TensorFlow, PyTorch, Scikit-learn">
+                                <i class="fas fa-brain"></i>
+                                <div class="skill-info">
+                                    <span class="skill-name">Machine Learning</span>
+                                    <span class="skill-badge">Expert</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 92%"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill-item" data-tooltip="BERT, GPT, Transformers">
+                                <i class="fas fa-language"></i>
+                                <div class="skill-info">
+                                    <span class="skill-name">NLP</span>
+                                    <span class="skill-badge">Avancé</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill-item" data-tooltip="CNN, Object Detection, OpenCV">
+                                <i class="fas fa-eye"></i>
+                                <div class="skill-info">
+                                    <span class="skill-name">Computer Vision</span>
+                                    <span class="skill-badge">Avancé</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 80%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section Formation -->
+            <section id="education" class="section">
+                <div class="container">
+                    <h2>Formation</h2>
+                    <div class="education-timeline">
+                        <div class="education-card">
+                            <div class="education-year">2020</div>
+                            <div class="education-content">
+                                <h3>Doctorat en Intelligence Artificielle</h3>
+                                <p>Université de Paris</p>
+                                <span class="education-badge">Intelligence Artificielle</span>
+                                <p class="education-details">Spécialisation en Deep Learning et Computer Vision</p>
+                            </div>
+                        </div>
+
+                        <div class="education-card">
+                            <div class="education-year">2017</div>
+                            <div class="education-content">
+                                <h3>Master en Informatique</h3>
+                                <p>École Polytechnique</p>
+                                <span class="education-badge">Computer Science</span>
+                                <p class="education-details">Major de promotion - Mention Très Bien</p>
+                            </div>
+                        </div>
+
+                        <div class="education-card">
+                            <div class="education-year">2015</div>
+                            <div class="education-content">
+                                <h3>Licence en Mathématiques</h3>
+                                <p>ENS Lyon</p>
+                                <span class="education-badge">Mathématiques</span>
+                                <p class="education-details">Spécialisation en Algèbre et Analyse Numérique</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section Projets -->
+            <section id="projects" class="section">
+                <div class="container">
+                    <h2>Projets Réalisés</h2>
+                    <div class="projects-grid">
+                        <div class="project-card">
+                            <div class="project-header">
+                                <i class="fas fa-brain project-icon"></i>
+                                <span class="project-badge">IA & Santé</span>
+                            </div>
+                            <div class="project-content">
+                                <h3>HealthPredict AI</h3>
+                                <p>Système de prédiction pour le diagnostic précoce utilisant le Deep Learning</p>
+                                <div class="project-tech">
+                                    <span>Python</span>
+                                    <span>TensorFlow</span>
+                                    <span>AWS</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-header">
+                                <i class="fas fa-cloud project-icon"></i>
+                                <span class="project-badge">Cloud & DevOps</span>
+                            </div>
+                            <div class="project-content">
+                                <h3>CloudScale Platform</h3>
+                                <p>Plateforme d'auto-scaling pour applications microservices</p>
+                                <div class="project-tech">
+                                    <span>Kubernetes</span>
+                                    <span>Docker</span>
+                                    <span>Go</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-header">
+                                <i class="fas fa-robot project-icon"></i>
+                                <span class="project-badge">NLP</span>
+                            </div>
+                            <div class="project-content">
+                                <h3>SmartBot NLP</h3>
+                                <p>Assistant virtuel multilingue avec compréhension contextuelle</p>
+                                <div class="project-tech">
+                                    <span>BERT</span>
+                                    <span>PyTorch</span>
+                                    <span>FastAPI</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testimonials Section -->
+            <section id="testimonials" class="section">
+                <div class="container">
+                    <h2>Témoignages</h2>
+                    <blockquote>
+                        <p>"Alex est un véritable visionnaire en intelligence artificielle. Son expertise a transformé notre entreprise."</p>
+                        <cite>- CEO, NeuralTech Labs</cite>
+                    </blockquote>
+                    <blockquote>
+                        <p>"Un partenaire technologique exceptionnel, capable de résoudre les problèmes les plus complexes."</p>
+                        <cite>- Directeur Technique, CodeGen Solutions</cite>
+                    </blockquote>
+                </div>
+            </section>
+
+            <!-- Blog Section modernisée -->
+            <section id="blog" class="section">
+                <div class="container">
+                    <h2>Blog</h2>
+                    <div class="blog-grid">
+                        <article class="blog-card">
+                            <div class="blog-image">
+                                <div class="blog-category">IA</div>
+                            </div>
+                            <div class="blog-content">
+                                <h3>Les 5 Tendances de l'IA en 2024</h3>
+                                <p>Un aperçu des avancées dans l'intelligence artificielle...</p>
+                                <a href="#" class="read-more">Lire l'article <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+                        <!-- Répéter pour autres articles -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section modernisée -->
+            <section id="contact" class="section">
+                <div class="container">
+                    <h2>Contact</h2>
+                    <div class="contact-grid">
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <div class="contact-details">
+                                    <h3>Téléphone</h3>
+                                    <p>07 89 45 67 12</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <div class="contact-details">
+                                    <h3>Email</h3>
+                                    <p>alex.garnier@techpro.com</p>
+                                </div>
+                            </div>
+                            <div class="contact-social">
+                                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="modern-footer">
+            <div class="container">
+                <p>Réalisé par Dimitri Rey - BTS SIO</p>
+            </div>
+        </footer>
+
+        <!-- Chat widget -->
+        <div class="chat-widget">
+            <div class="chat-bubble">
+                <i class="fas fa-comments"></i>
+            </div>
+            <div class="chat-box">
+                <div class="chat-header">
+                    <h3>Discussion</h3>
+                    <button class="close-chat"><i class="fas fa-times"></i></button>
+                </div>
+                <div class="chat-messages">
+                    <!-- Les messages s'afficheront ici -->
+                </div>
+                <div class="chat-input">
+                    <input type="text" placeholder="Posez votre question...">
+                    <button class="send-message"><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
         </div>
+
+        <!-- JavaScript : script minifié en defer -->
+        <script src="assets/js/script.min.js" defer></script>
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+        <!-- Ajouter juste avant la fermeture du body -->
+        <a href="#contact" class="contact-floating">
+            <i class="fas fa-envelope"></i>
+            <span>Me contacter</span>
+        </a>
     </div>
 </body>
 </html>
