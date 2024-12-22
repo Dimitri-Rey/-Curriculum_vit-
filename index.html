@@ -1,117 +1,203 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <!-- Meta Information -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio de Dimitri Rey, technicien informatique passionné par les systèmes et réseaux.">
-    <title>Portfolio - Dimitri Rey</title>
-    <link rel="icon" href="assets/favicon.png" type="image/png">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta name="description" content="Portfolio de Alex Garnier, spécialiste en ingénierie logicielle et intelligence artificielle.">
+    <title>Portfolio - Alex Garnier</title>
+
+    <!-- External Resources -->
+    <link rel="stylesheet" href="assets/styles/styles.css">
+    <link rel="icon" href="assets/images/favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Header Section -->
     <header>
-        <nav>
-            <ul>
-                <li><a href="#accueil">Accueil</a></li>
-                <li><a href="#a-propos">À propos</a></li>
-                <li><a href="#experience">Expérience</a></li>
-                <li><a href="#competences">Compétences</a></li>
-                <li><a href="#projets">Projets Réalisés</a></li>
-                <li><a href="#formation">Formation</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <h1>Bienvenue dans mon univers numérique !</h1>
+            <p>Je suis <strong>Alex Garnier</strong>, un spécialiste en ingénierie logicielle et intelligence artificielle, passionné par les technologies qui transforment notre monde.</p>
+            <p>Ma devise : <em>"L'innovation au service de l'humain."</em></p>
+        </div>
     </header>
 
+    <!-- Navigation Menu -->
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#experience">Expérience</a></li>
+                <li><a href="#skills">Compétences</a></li>
+                <li><a href="#projects">Projets Réalisés</a></li>
+                <li><a href="#education">Formation</a></li>
+                <li><a href="#testimonials">Témoignages</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
     <main>
-        <section id="accueil" class="hero">
-            <div class="content">
-                <h1>Bienvenue dans mon univers numérique !</h1>
-                <p>Je suis Dimitri Rey, un technicien informatique passionné et engagé, spécialisé en systèmes et réseaux.</p>
-                <p class="motto">"Simplifier le complexe, sécuriser l'essentiel."</p>
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <h2>À propos</h2>
+                <p>Depuis plus de dix ans, je travaille à l'intersection de l'ingénierie logicielle et de l'intelligence artificielle. Mon objectif est de concevoir des solutions technologiques innovantes, fiables et éthiques pour répondre aux défis de demain. Passionné par l'apprentissage automatique, je développe des systèmes capables d'apprendre et de s'adapter en temps réel.</p>
+                <p>En parallèle, je suis mentor pour les jeunes talents en technologie et j'écris régulièrement sur les tendances dans le domaine de l'IA et du cloud computing.</p>
             </div>
         </section>
 
-        <section id="a-propos">
-            <h2>À propos</h2>
-            <p>Depuis mon premier contact avec un ordinateur, ma curiosité pour la technologie ne cesse de croître. Mon parcours est marqué par une diversité d'expériences, allant du support informatique à des missions de cybersécurité au sein de l'armée. Aujourd'hui, je me consacre aux systèmes réseaux avancés et à la cybersécurité.</p>
+        <!-- Experience Section -->
+        <section id="experience" class="section">
+            <div class="container">
+                <h2>Expérience</h2>
+                <div class="experience-item">
+                    <h3>Architecte en Intelligence Artificielle</h3>
+                    <p><strong>NeuralTech Labs</strong> - Paris (Actuel)</p>
+                    <ul>
+                        <li>Conception et déploiement de modèles de machine learning à grande échelle.</li>
+                        <li>Optimisation des algorithmes pour des cas d'utilisation spécifiques dans l'industrie de la santé.</li>
+                        <li>Encadrement d'une équipe de 10 chercheurs en IA.</li>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                    <h3>Ingénieur en Développement Logiciel Senior</h3>
+                    <p><strong>CodeGen Solutions</strong> - Lyon (2015 - 2021)</p>
+                    <ul>
+                        <li>Création d'applications SaaS évolutives pour la gestion d'entreprises.</li>
+                        <li>Mise en œuvre de pratiques DevOps pour accélérer le cycle de développement.</li>
+                        <li>Collaboration avec les équipes produits pour améliorer l'expérience utilisateur.</li>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                    <h3>Stage en Recherche sur l'Apprentissage Profond</h3>
+                    <p><strong>Université de Stanford</strong> - Californie (2014)</p>
+                    <ul>
+                        <li>Exploration des architectures de réseaux neuronaux convolutionnels pour la vision par ordinateur.</li>
+                        <li>Publication d'un article scientifique sur la reconnaissance faciale à base d'IA.</li>
+                        <li>Collaboration avec des leaders du domaine sur des projets de recherche innovants.</li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
-        <section id="experience">
-            <h2>Expérience</h2>
-            <div class="experience-item">
-                <h3>Alternant Technicien Informatique</h3>
-                <p><strong>Oelis - Saint-Étienne (Actuel)</strong></p>
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <div class="container">
+                <h2>Compétences</h2>
+                <div class="skills">
+                    <h3>Techniques</h3>
+                    <ul>
+                        <li>Langages : Python, Java, R, JavaScript, TensorFlow, PyTorch.</li>
+                        <li>Cloud : AWS, Azure, Google Cloud, outils d'orchestration.</li>
+                        <li>Outils IA : OpenAI API, Scikit-learn, Keras, NLP avancé.</li>
+                    </ul>
+                </div>
+                <div class="skills">
+                    <h3>Gestion et Leadership</h3>
+                    <ul>
+                        <li>Direction d'équipes de R&D en IA.</li>
+                        <li>Gestion de projets en méthodologie Agile/Scrum.</li>
+                        <li>Mentorat et formation continue.</li>
+                    </ul>
+                </div>
+                <div class="skills">
+                    <h3>Langues</h3>
+                    <ul>
+                        <li>Français : langue maternelle.</li>
+                        <li>Anglais : bilingue (C2).</li>
+                        <li>Espagnol : niveau avancé (C1).</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div class="container">
+                <h2>Projets Réalisés</h2>
+                <div class="project">
+                    <h3>Plateforme d'Analyse Prédictive pour la Santé</h3>
+                    <p>Développement d'une plateforme utilisant le machine learning pour prédire les maladies chroniques à partir des données des patients. Succès : amélioration de 25 % des diagnostics précoces.</p>
+                </div>
+                <div class="project">
+                    <h3>Système de Recommandation pour E-commerce</h3>
+                    <p>Création d'un moteur de recommandations basé sur l'IA pour un grand site de vente en ligne. Résultat : augmentation de 35 % des ventes.</p>
+                </div>
+                <div class="project">
+                    <h3>Application de Gestion Énergétique</h3>
+                    <p>Conception d'une application mobile pour optimiser la consommation énergétique des foyers, intégrant des technologies IoT et cloud.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="section">
+            <div class="container">
+                <h2>Formation</h2>
                 <ul>
-                    <li>Gestion et configuration de systèmes réseaux complexes.</li>
-                    <li>Résolution d'incidents critiques avec une approche orientée client.</li>
-                    <li>Formation des collaborateurs pour maximiser leur efficacité technologique.</li>
+                    <li>Doctorat en Intelligence Artificielle - Université de Paris (2020)</li>
+                    <li>Master en Informatique - Université de Lyon (2015)</li>
+                    <li>Licence en Informatique - Université d'Aix-Marseille (2013)</li>
                 </ul>
             </div>
-            <div class="experience-item">
-                <h3>Assistant Informatique</h3>
-                <p><strong>Conseil départemental du Doubs (2022 - Présent)</strong></p>
-                <ul>
-                    <li>Installation et mise à jour des équipements (PC, réseaux, imprimantes).</li>
-                    <li>Réalisation de diagnostics approfondis pour résoudre les pannes.</li>
-                    <li>Suivi des tickets via GLPI et collaboration interservices.</li>
-                </ul>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="section">
+            <div class="container">
+                <h2>Témoignages</h2>
+                <blockquote>
+                    <p>"Alex est un véritable visionnaire en intelligence artificielle. Son expertise a transformé notre entreprise."</p>
+                    <cite>- CEO, NeuralTech Labs</cite>
+                </blockquote>
+                <blockquote>
+                    <p>"Un partenaire technologique exceptionnel, capable de résoudre les problèmes les plus complexes."</p>
+                    <cite>- Directeur Technique, CodeGen Solutions</cite>
+                </blockquote>
             </div>
         </section>
 
-        <section id="competences">
-            <h2>Compétences</h2>
-            <ul>
-                <li><strong>Langages informatiques :</strong> Python, Bash/Shell, JavaScript, C, C++, PHP, SQL.</li>
-                <li><strong>Réseaux et sécurité :</strong> Cisco, MikroTik, Dell, D-Link, configuration avancée.</li>
-                <li><strong>Outils IT :</strong> GLPI, Teams, outils de prise en main à distance.</li>
-                <li><strong>Gestion de projets :</strong> Analyse des besoins, planification, gestion des risques et coordination d’équipes.</li>
-                <li><strong>Langues :</strong> Français (langue maternelle), Anglais (B2 - professionnel).</li>
-            </ul>
-        </section>
-
-        <section id="projets">
-            <h2>Projets Réalisés</h2>
-            <div class="project-item">
-                <h3>Optimisation de réseau pour une PME</h3>
-                <p>Déploiement d’un réseau robuste avec VLANs et accès sécurisés, augmentant la productivité de 30 %.</p>
-            </div>
-            <div class="project-item">
-                <h3>Formation à la sécurité informatique</h3>
-                <p>Formations sur les bonnes pratiques en cybersécurité (phishing, gestion des mots de passe).</p>
-            </div>
-            <div class="project-item">
-                <h3>Montage et optimisation de PC gaming haut de gamme</h3>
-                <p>Création de solutions techniques adaptées aux besoins spécifiques des gamers et créateurs de contenu.</p>
+        <!-- Blog Section -->
+        <section id="blog" class="section">
+            <div class="container">
+                <h2>Blog</h2>
+                <article>
+                    <h3>Les 5 Tendances de l'IA à Surveiller en 2024</h3>
+                    <p>Un aperçu des avancées dans l'intelligence artificielle, de l'apprentissage fédéré à l'IA générative.</p>
+                    <a href="#">Lire l'article</a>
+                </article>
+                <article>
+                    <h3>Éthique et IA : Où en Sommes-Nous ?</h3>
+                    <p>Une réflexion sur les enjeux éthiques dans le développement de l'intelligence artificielle.</p>
+                    <a href="#">Lire l'article</a>
+                </article>
             </div>
         </section>
 
-        <section id="formation">
-            <h2>Formation</h2>
-            <ul>
-                <li>BTS SIO option SISR (en alternance) – Saint-Étienne</li>
-                <li>Faculté de Droit, Sorbonne (Paris 1) – Étudiant</li>
-                <li>Baccalauréat professionnel Systèmes numériques – Besançon</li>
-            </ul>
-        </section>
-
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Prêt à collaborer ou discuter ?</p>
-            <ul class="contact-list">
-                <li><i class="fas fa-phone"></i> 07 89 12 34 56</li>
-                <li><i class="fas fa-envelope"></i> contact@dimitri-rey.pro</li>
-                <li><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/dimitri-rey">linkedin.com/in/dimitri-rey</a></li>
-                <li><i class="fab fa-github"></i> <a href="https://github.com/dimitri-rey">github.com/dimitri-rey</a></li>
-            </ul>
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <h2>Contact</h2>
+                <p><strong>Téléphone :</strong> 07 89 45 67 12</p>
+                <p><strong>Email :</strong> alex.garnier@techpro.com</p>
+                <p><strong>LinkedIn :</strong> <a href="https://linkedin.com/in/alex-garnier">linkedin.com/in/alex-garnier</a></p>
+                <p><strong>GitHub :</strong> <a href="https://github.com/alex-garnier">github.com/alex-garnier</a></p>
+            </div>
         </section>
     </main>
 
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Dimitri Rey. Tous droits réservés.</p>
+        <div class="container">
+            <p>&copy; 2024 Alex Garnier. Tous droits réservés.</p>
+        </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- JavaScript -->
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
