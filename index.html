@@ -75,7 +75,7 @@
     <!-- Header Section -->
     <header>
         <div class="container">
-            <h1>Bienvenue dans mon univers numérique !</h1>
+            <h1><span id="typing-text"></span><span class="cursor">|</span></h1>
             <p>Je suis <strong>Alex Garnier</strong>, un spécialiste en ingénierie logicielle et intelligence artificielle, passionné par les technologies qui transforment notre monde.</p>
             <p>Ma devise : <em>"L'innovation au service de l'humain."</em></p>
         </div>
@@ -138,6 +138,29 @@
                         <li>Publication d'un article scientifique sur la reconnaissance faciale à base d'IA.</li>
                         <li>Collaboration avec des leaders du domaine sur des projets de recherche innovants.</li>
                     </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="stats" class="section">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="counter" data-value="3">0</span>
+                        <p>Années d'Expérience</p>
+                    </div>
+                    <div class="stat-item">
+                        <span class="counter" data-value="12">0</span>
+                        <p>Projets Réalisés</p>
+                    </div>
+                    <div class="stat-item">
+                        <span class="counter" data-value="8">0</span>
+                        <p>Clients Satisfaits</p>
+                    </div>
+                    <div class="stat-item">
+                        <span class="counter" data-value="15">0</span>
+                        <p>Technologies Maîtrisées</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -255,23 +278,23 @@
         </div>
     </footer>
 
-    <!-- Bulle de contact flottante -->
-    <div class="contact-bubble">
-        <i class="fas fa-envelope"></i>
-    </div>
-
-    <!-- Popup de contact -->
-    <div class="contact-popup">
-        <div class="popup-content">
-            <a href="https://linkedin.com/in/alex-garnier" target="_blank">
-                <i class="fab fa-linkedin"></i> LinkedIn
-            </a>
-            <a href="https://github.com/alex-garnier" target="_blank">
-                <i class="fab fa-github"></i> GitHub
-            </a>
-            <a href="mailto:alex.garnier@techpro.com">
-                <i class="fas fa-envelope"></i> Email
-            </a>
+    <!-- Chat widget -->
+    <div class="chat-widget">
+        <div class="chat-bubble">
+            <i class="fas fa-comments"></i>
+        </div>
+        <div class="chat-box">
+            <div class="chat-header">
+                <h3>Discussion</h3>
+                <button class="close-chat"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="chat-messages">
+                <!-- Les messages s'afficheront ici -->
+            </div>
+            <div class="chat-input">
+                <input type="text" placeholder="Posez votre question...">
+                <button class="send-message"><i class="fas fa-paper-plane"></i></button>
+            </div>
         </div>
     </div>
 
