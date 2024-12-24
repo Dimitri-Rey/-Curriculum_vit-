@@ -1,114 +1,89 @@
-# Documentation pour le Code HTML du Portfolio
+# Portfolio d'Alex Garnier - Documentation Technique
 
-## Introduction
-Ce document détaille l'organisation du code HTML utilisé pour le portfolio d'Alex Garnier, spécialiste en ingénierie logicielle et intelligence artificielle. Le fichier HTML est structuré de manière logique et respecte les meilleures pratiques en termes de lisibilité et de maintenance.
+## 📌 Vue d'ensemble
+Ce portfolio est une vitrine professionnelle présentant mes compétences en ingénierie logicielle et en intelligence artificielle. Il est construit avec une attention particulière à l'accessibilité, la performance et le référencement (SEO).
 
----
+## 🛠 Technologies Utilisées
+- HTML5 sémantique
+- CSS3 avec Flexbox/Grid
+- Police Google Fonts (Poppins)
+- Optimisation SEO
+- Design Responsive
 
-## Structure Générale
-Le code HTML est organisé en plusieurs sections principales :
+## 📂 Structure du Projet
 
-1. **Head** : Contient les métadonnées et les liens vers les ressources externes.
-2. **Body** : Regroupe le contenu affiché sur la page, divisé en sections :
-    - Header
-    - Navigation
-    - Main (composé de plusieurs sous-sections)
-    - Footer
+3. Lancer le site :
+- Ouvrir `index.html` dans votre navigateur
+- Ou utiliser un serveur local (Live Server pour VS Code)
 
----
+## 🔍 Bonnes Pratiques Implémentées
 
-## Détails des Sections
+### SEO
+- Balises meta optimisées
+- Structure HTML sémantique
+- Hiérarchie des titres cohérente
+- Images optimisées avec attributs alt
 
-### 1. Head
-- **Description** : Fournit des métadonnées pour le SEO et inclut les ressources externes.
-- **Contenu principal** :
-  - `<meta charset>` : Définit l'encodage de caractères (UTF-8).
-  - `<meta viewport>` : Rend le site responsive.
-  - `<link>` : Inclut le fichier CSS et la police Google "Poppins".
+### Performance
+- Chargement différé des images
+- Minification des ressources
+- Optimisation des polices
+- Cache intelligent
 
-### 2. Header
-- **Description** : Présente une introduction au portfolio.
-- **Éléments principaux** :
-  - `<h1>` : Titre principal "Bienvenue dans mon univers numérique!".
-  - `<p>` : Description de la devise et du profil professionnel.
+### Accessibilité
+- Contraste WCAG respecté
+- Navigation au clavier
+- ARIA landmarks
+- Textes alternatifs
 
-### 3. Navigation
-- **Description** : Barre de navigation pour accéder rapidement aux différentes sections.
-- **Éléments principaux** :
-  - `<ul>` : Liste des liens vers les sections principales (À propos, Expérience, Compétences, etc.).
-  - `<a>` : Liens internes avec des ancres vers chaque section.
+## 📱 Responsive Design
+- Mobile First
+- Points de rupture adaptés
+- Images flexibles
+- Menus adaptatifs
 
-### 4. Main
-Contient toutes les sections principales du contenu.
+## 🔄 Maintenance
 
-#### a) Section "À propos"
-- **Description** : Brève présentation de la carrière et des passions d'Alex Garnier.
-- **Éléments principaux** :
-  - `<h2>` : Titre "À propos".
-  - `<p>` : Paragraphe décrivant les objectifs et les motivations professionnelles.
+### Mise à jour du Contenu
+1. Modifier les sections concernées dans `index.html`
+2. Vérifier la cohérence du style dans les fichiers CSS
+3. Tester sur différents appareils
+4. Déployer les modifications
 
-#### b) Section "Expérience"
-- **Description** : Liste détaillée des expériences professionnelles d'Alex.
-- **Éléments principaux** :
-  - `<h3>` : Nom du poste occupé.
-  - `<p>` : Nom de l'entreprise et période d'emploi.
-  - `<ul>` : Liste des tâches principales pour chaque poste.
+### Ajout de Nouvelles Fonctionnalités
+1. Créer une nouvelle branche
+2. Développer la fonctionnalité
+3. Tester exhaustivement
+4. Merger après validation
 
-#### c) Section "Compétences"
-- **Description** : Liste des compétences techniques, de gestion et linguistiques.
-- **Éléments principaux** :
-  - `<h3>` : Catégories de compétences (Techniques, Gestion, Langues).
-  - `<ul>` : Liste des compétences détaillées.
+## 📈 Améliorations Futures
+- [ ] Ajout d'animations JavaScript
+- [ ] Intégration d'un blog dynamique
+- [ ] Formulaire de contact fonctionnel
+- [ ] Mode sombre
+- [ ] Multilingue (EN/FR)
 
-#### d) Section "Projets Réalisés"
-- **Description** : Présentation de projets professionnels marquants.
-- **Éléments principaux** :
-  - `<h3>` : Titre de chaque projet.
-  - `<p>` : Description et résultats obtenus.
+## 🤝 Contribution
+Les contributions sont les bienvenues ! Pour contribuer :
+1. Forker le projet
+2. Créer une branche (`git checkout -b feature/AmazingFeature`)
+3. Commiter les changements (`git commit -m 'Add AmazingFeature'`)
+4. Pusher sur la branche (`git push origin feature/AmazingFeature`)
+5. Ouvrir une Pull Request
 
-#### e) Section "Formation"
-- **Description** : Parcours académique d'Alex Garnier.
-- **Éléments principaux** :
-  - `<ul>` : Liste des diplômes obtenus avec leurs dates et institutions.
+## 🎨 Personnalisation Visuelle
 
-#### f) Section "Témoignages"
-- **Description** : Avis de clients ou collaborateurs.
-- **Éléments principaux** :
-  - `<blockquote>` : Texte du témoignage.
-  - `<cite>` : Nom et poste de l'auteur du témoignage.
+### Thèmes
+Le site propose deux thèmes :
+- Clair (par défaut)
+- Sombre (bientôt disponible)
 
-#### g) Section "Blog"
-- **Description** : Aperçu des articles publiés par Alex Garnier.
-- **Éléments principaux** :
-  - `<article>` : Contient un titre et un extrait d'article avec un lien vers l'article complet.
+### Couleurs
+Modifiez les variables CSS dans `styles.min.css` :
 
-#### h) Section "Contact"
-- **Description** : Informations de contact pour joindre Alex.
-- **Éléments principaux** :
-  - `<p>` : Détails de contact (téléphone, email, LinkedIn, GitHub).
 
-### 5. Footer
-- **Description** : Pied de page avec les droits d'auteur.
-- **Éléments principaux** :
-  - `<p>` : Texte "© 2024 Alex Garnier. Tous droits réservés."
 
 ---
 
-## Bonnes Pratiques Appliquées
-1. **Indentation** : Chaque balise est correctement indentée pour améliorer la lisibilité.
-2. **Commentaires** : Les sections sont clairement identifiées avec des commentaires.
-3. **Structure logique** : Le contenu est hiérarchisé selon son importance.
-4. **Accessibilité** : Utilisation de balises sémantiques (header, nav, section, footer).
-5. **Performance** : Chargement de polices optimisé avec `<link rel="preconnect">`.
-
----
-
-## Suggestions d'Amélioration
-- Ajouter un fichier JavaScript pour des animations interactives.
-- Optimiser davantage le SEO avec des balises `<meta>` supplémentaires.
-- Inclure un formulaire dans la section "Contact" pour une meilleure interaction utilisateur.
-
----
-
-Ce fichier HTML est conçu pour être professionnel, facile à maintenir et extensible pour des fonctionnalités supplémentaires.
+© 2024 Dimitri Rey. Tous droits réservés.
 
