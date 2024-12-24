@@ -1,3 +1,19 @@
+/* Au début du fichier */
+/* Styles critiques pour le premier rendu */
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2c3e50;
+  --background-color: #f5f6fa;
+  --text-color: #2c3e50;
+}
+
+/* Préchargement des polices avec font-display */
+@font-face {
+  font-family: 'Poppins';
+  font-display: swap;
+  src: url('path/to/poppins.woff2') format('woff2');
+}
+
 * {
     margin: 0;
     padding: 0;
