@@ -26,7 +26,7 @@
     [1] META INFOS DE BASE
     Définition du charset, de l'affichage responsive et de la description pour le référencement.
     -->
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta 
         name="description" 
@@ -117,10 +117,8 @@
     Encore une fois pour optimiser le rendu (facultatif).
     -->
     <link 
-        rel="preload" 
-        as="style" 
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" 
-        onload="this.rel='stylesheet'"
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap"
     >
     <noscript>
         <link 
@@ -144,10 +142,8 @@
     Placé dans le head pour respecter les bonnes pratiques et éviter le FOUC des icônes.
     -->
     <link 
-        rel="stylesheet" 
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" 
-        media="print" 
-        onload="this.media='all'"
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     >
     <noscript>
         <link 
@@ -161,14 +157,11 @@
     Preload de la font et du style (optionnel).
     -->
     <link 
-        rel="preload" 
-        as="font" 
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" 
-        crossorigin
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
     >
     <link 
-        rel="preload" 
-        as="style" 
+        rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     >
 </head>
