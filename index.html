@@ -2,19 +2,35 @@
 <html lang="fr">
 <head>
     <style>
-        /* CSS critique pour le header et le layout principal */
+        /* Styles critiques pour le premier rendu */
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --background-color: #f5f6fa;
+            --text-color: #2c3e50;
+        }
+
+        /* Préchargement des polices avec font-display */
+        @font-face {
+            font-family: 'Poppins';
+            font-display: swap;
+            src: url('path/to/poppins.woff2') format('woff2');
+        }
+
         body {
             background-color: #f5f6fa;
             color: #2c3e50;
             font-family: 'Poppins', sans-serif;
             line-height: 1.6;
         }
+
         header {
             background-color: #3498db;
             color: #fff;
             padding: 2rem 0;
             text-align: center;
         }
+
         /* Ajoutez d'autres styles critiques ici */
     </style>
     <!-- Lien vers le reste du CSS -->
@@ -96,6 +112,11 @@
     -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" media="print" onload="this.media='all'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    </noscript>
 
     <!-- 
     [6] FEUILLE DE STYLE PRINCIPALE (styles.min.css)
@@ -141,15 +162,10 @@
     FONT AWESOME
     Placé dans le head pour respecter les bonnes pratiques et éviter le FOUC des icônes.
     -->
-    <link 
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    >
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" media="print" onload="this.media='all'">
     <noscript>
-        <link 
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" 
-            rel="stylesheet"
-        >
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     </noscript>
 
     <!-- 
@@ -174,13 +190,6 @@
     <meta name="pjax-js-version" content="..." data-pjax-js-version="...">
     <meta name="selected-link" content="repo_source" data-turbo-transient>
     <meta name="hydrostats" data-hydrostats="publish" content="...">
-
-    <link rel="stylesheet" href="https://github.githubassets.com/assets/dark_dimmed-f9fbc4b99a77.css" crossorigin="anonymous" media="all">
-    <link rel="stylesheet" href="https://github.githubassets.com/assets/dark_high_contrast-cff1c9b27b1a.css" crossorigin="anonymous" media="all">
-    <link rel="stylesheet" href="https://github.githubassets.com/assets/dark_colorblind-70097f75aec1.css" crossorigin="anonymous" media="all">
-    <link rel="stylesheet" href="https://github.githubassets.com/assets/light_colorblind-c2f0d49bdcd9.css" crossorigin="anonymous" media="all">
-    <link rel="stylesheet" href="https://github.githubassets.com/assets/light_high_contrast-4747d7bc0bc4.css" crossorigin="anonymous" media="all">
-    <link rel="stylesheet" href="https://github.githubassets.com/assets/dark_tritanopia-a188d53f44bb.css" crossorigin="anonymous" media="all">
 
     <!-- Préchargement des ressources critiques -->
     <link rel="preload" href="assets/styles/styles.min.css" as="style">
